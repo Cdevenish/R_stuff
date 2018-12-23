@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Chapter 1-2</title>
+      <link>/R_stuff/chapter1/2/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/chapter1/2/</guid>
+      <description>Header H1 Header H2 Header H3 Header Paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
       <title>Chapter 2-4 (weight: 20)</title>
       <link>/R_stuff/chapter2/4/</link>
       <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
@@ -54,15 +63,6 @@
       
       <guid>/R_stuff/chapter1/1/</guid>
       <description>Basics of creating animated gifs with gifski package in R1. Convert png files to giflibrary(gifski)# set up file paths to save the pngspng_path &amp;lt;- file.path(tempdir(), &amp;quot;frame%03d.png&amp;quot;)open the png connection and plotpng(png_path)for(i in 1:10)plot(rnorm(i * 10), main = &amp;quot;&amp;quot;, axes = F, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;&amp;quot;)dev.off()## png ## 2make vector of filenamespng_files &amp;lt;- sprintf(png_path, 1:10)gif_file &amp;lt;- &amp;quot;.</description>
-    </item>
-    
-    <item>
-      <title>Chapter 1-2</title>
-      <link>/R_stuff/chapter1/2/</link>
-      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
-      
-      <guid>/R_stuff/chapter1/2/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
     <item>
