@@ -27,7 +27,76 @@
 </nav>
 </div>
 <div class="content-container">
-<main><h1>gifski examples</h1><p>Gif package</p>
+<main><h1>gifski examples</h1>
+
+
+<div id="basics-of-creating-animated-gifs-with-gifski-package-in-r" class="section level1">
+<h1>Basics of creating animated gifs with gifski package in R</h1>
+<div id="convert-png-files-to-gif" class="section level2">
+<h2>1. Convert png files to gif</h2>
+<pre class="r"><code>library(gifski)
+# set up file paths to save the pngs
+png_path &lt;- file.path(tempdir(), &quot;frame%03d.png&quot;)</code></pre>
+<div id="open-the-png-connection-and-plot" class="section level3">
+<h3>open the png connection and plot</h3>
+<pre class="r"><code>png(png_path)
+for(i in 1:10)
+  plot(rnorm(i * 10), main = &quot;&quot;, axes = F, ylab = &quot;&quot;, xlab = &quot;&quot;)
+dev.off()</code></pre>
+<pre><code>## png 
+##   2</code></pre>
+</div>
+<div id="make-vector-of-filenames" class="section level3">
+<h3>make vector of filenames</h3>
+<pre class="r"><code>png_files &lt;- sprintf(png_path, 1:10)
+gif_file &lt;- &quot;gif_example.gif&quot;
+
+gifski(png_files, gif_file, delay = 0.1)</code></pre>
+<pre><code>## 
+Frame 1 (10%)
+Frame 2 (20%)
+Frame 3 (30%)
+Frame 4 (40%)
+Frame 5 (50%)
+Frame 6 (60%)
+Frame 7 (70%)
+Frame 8 (80%)
+Frame 9 (90%)
+Frame 10 (100%)
+## Finalizing encoding... done!</code></pre>
+<pre><code>## [1] &quot;J:\\MMU\\R\\web\\r_stuff\\content\\Chapter1\\gif_example.gif&quot;</code></pre>
+<pre class="r"><code>unlink(png_files) # delete files</code></pre>
+<div class="figure">
+<img src="gif_example.gif" />
+
+</div>
+</div>
+</div>
+<div id="write-direct-to-gif-from-an-expression" class="section level2">
+<h2>2 Write direct to gif from an expression</h2>
+<pre class="r"><code># Here the gif is saved into the working directory
+save_gif({
+  for(i in 1:10) plot(rnorm(i * 10), main = &quot;&quot;, axes =F, frame.plot=TRUE, ylab = &quot;&quot;, xlab = &quot;&quot;)},
+  gif_file &lt;- &quot;gif_example.gif&quot;, delay = 0.1)</code></pre>
+<pre><code>## 
+Frame 1 (10%)
+Frame 2 (20%)
+Frame 3 (30%)
+Frame 4 (40%)
+Frame 5 (50%)
+Frame 6 (60%)
+Frame 7 (70%)
+Frame 8 (80%)
+Frame 9 (90%)
+Frame 10 (100%)
+## Finalizing encoding... done!</code></pre>
+<pre><code>## [1] &quot;J:\\MMU\\R\\web\\r_stuff\\content\\Chapter1\\gif_example.gif&quot;</code></pre>
+<div class="figure">
+<img src="gif_example.gif" />
+
+</div>
+</div>
+</div>
 <div class="edit-meta">Last updated on 23 Dec 2018 / Published on 23 Dec 2018<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/chapter1/" title="Examples from R packages"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Examples from R packages</a>
 <a class="nav nav-next" href="/R_stuff/chapter1/2/" title="Chapter 1-2">Next - Chapter 1-2 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
