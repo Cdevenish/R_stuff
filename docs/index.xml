@@ -53,7 +53,7 @@
       <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/R_stuff/chapter1/1/</guid>
-      <description>Basics of creating animated gifs with gifski package in R1. Convert png files to giflibrary(gifski)# set up file paths to save the pngspng_path &amp;lt;- file.path(tempdir(), &amp;quot;frame%03d.png&amp;quot;)open the png connection and plotpng(png_path)for(i in 1:10)plot(rnorm(i * 10), main = &amp;quot;&amp;quot;, axes = F, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;&amp;quot;)dev.off()## png ## 2make vector of filenamespng_files &amp;lt;- sprintf(png_path, 1:10)gif_file &amp;lt;- &amp;quot;gif_example.</description>
+      <description>Basics of creating animated gifs with gifski package in R1. Convert png files to giflibrary(gifski)# set up file paths to save the pngspng_path &amp;lt;- file.path(tempdir(), &amp;quot;frame%03d.png&amp;quot;)open the png connection and plotpng(png_path)for(i in 1:10)plot(rnorm(i * 10), main = &amp;quot;&amp;quot;, axes = F, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;&amp;quot;)dev.off()## png ## 2make vector of filenamespng_files &amp;lt;- sprintf(png_path, 1:10)gif_file &amp;lt;- &amp;quot;.</description>
     </item>
     
     <item>
