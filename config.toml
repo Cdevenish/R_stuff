@@ -1,4 +1,4 @@
-baseURL = "http://cdevenish.github.io/r_stuff/"
+baseURL = "https://cdevenish.github.io/R_stuff/"
 publishDir = "docs"
 
 languageCode = "en-us"
