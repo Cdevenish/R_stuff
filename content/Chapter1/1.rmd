@@ -30,7 +30,7 @@ gif_file <- "../../docs/images/gif_example.gif"
 gifski(png_files, gif_file, delay = 0.1)
 unlink(png_files) # delete files
 ```
-![animated gif image](/images/gif_example.gif "Chapter1")
+![animated gif image](../gif_example.gif "Chapter1")
 
 
 ## 2 Write direct to gif from an expression
@@ -42,4 +42,4 @@ save_gif({
   gif_file <- "gif_example.gif", delay = 0.1)
 
 ```
-![](/images/gif_example.gif)
+![](../gif_example.gif)
