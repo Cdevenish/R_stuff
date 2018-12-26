@@ -1,0 +1,7 @@
+---
+title: "MMU Futures R Course"
+author: "Christian Devenish"
+date: "24 December 2018"
+output: html_document
+---
+

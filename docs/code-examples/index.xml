@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Examples from R packages on Miscellaneous R stuff</title>
+    <link>/R_stuff/code-examples/</link>
+    <description>Recent content in Examples from R packages on Miscellaneous R stuff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Oct 2017 15:26:15 +0000</lastBuildDate>
+    
+	<atom:link href="/R_stuff/code-examples/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Example md page</title>
+      <link>/R_stuff/code-examples/2/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/code-examples/2/</guid>
+      <description>HeaderH1 HeaderH2 HeaderH3 HeaderParagraphLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>Chapter 1-3</title>
+      <link>/R_stuff/code-examples/3/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>/R_stuff/code-examples/3/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>Chapter 1-4</title>
+      <link>/R_stuff/code-examples/4/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>/R_stuff/code-examples/4/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>Basics of creating animated gifs with gifski package in R</title>
+      <link>/R_stuff/code-examples/1/</link>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/code-examples/1/</guid>
+      <description>1a. Convert png files to gif (from help file)In this example, we create a series of pngs (using the png function) and save them in a temporary directory.
+library(gifski)# set up file paths to save the pngspng_path &amp;lt;- file.path(tempdir(), &amp;quot;frame%03d.png&amp;quot;)open the png connection and plotpng(png_path)for(i in 1:10)plot(rnorm(i * 10), main = &amp;quot;&amp;quot;, axes = F, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;&amp;quot;)dev.off()## png ## 2make vector of filenamespng_files &amp;lt;- sprintf(png_path, 1:10)gif_file &amp;lt;- &amp;quot;gif_example.</description>
+    </item>
+    
+  </channel>
+</rss>

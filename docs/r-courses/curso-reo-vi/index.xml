@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Curso R del REO VI on Miscellaneous R stuff</title>
+    <link>/R_stuff/r-courses/curso-reo-vi/</link>
+    <description>Recent content in Curso R del REO VI on Miscellaneous R stuff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/R_stuff/r-courses/curso-reo-vi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chapter 3-2-3</title>
+      <link>/R_stuff/r-courses/curso-reo-vi/3/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/curso-reo-vi/3/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>Chapter 3-2-4</title>
+      <link>/R_stuff/r-courses/curso-reo-vi/4/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/curso-reo-vi/4/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>1. R Como calculadora sencilla</title>
+      <link>/R_stuff/r-courses/curso-reo-vi/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/curso-reo-vi/1/</guid>
+      <description>knitr::opts_chunk$set(echo = TRUE)1 + 1 10 - 5 10 / 2 2^3 # potenciación 2 * 5 # sin o con espacios - funciona igual 2*5 Sin embargo, espacios pueden facilitar la lectura
+Otros operadores 10 %% 5 # módulo (resto de la división entera). p.ej 10/5 = 2 (sin decimal) 10 %% 6 # 10/6 = 1 con un resto de 4 17 %% 12 # p. ej convertir de 24h a 12h 10 %/% 5 # división entera (resultado de la división sin fracción - convertido en número entero) 10 %/% 6 Como encontrar ayuda Para ayuda con los operadores:</description>
+    </item>
+    
+    <item>
+      <title>Empezando con R</title>
+      <link>/R_stuff/r-courses/curso-reo-vi/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/curso-reo-vi/2/</guid>
+      <description>knitr::opts_chunk$set(echo = TRUE) Vectores, variables y otros objetos Un vector es una colección ordenada de datos
+0.16 1 76 0.75 35 1000 24
+Por ejemplo, filas o columnas de datos
+o un solo valor
+3.141593
+Tipos de datos  Numérico (numeric) &amp;ndash; variable continuo &amp;ndash; variable entero
+ Carácter (character, string) &amp;ndash; texto
+ Lógico (logical) TRUE FALSE
+  Vector con un solo dato numérico a &amp;lt;- 1 b &amp;lt;- 5 x &amp;lt;- 100 # Operador de asignación: &amp;lt;- a x ###Para nombrar variables&amp;hellip; - No usar palabras reservadas</description>
+    </item>
+    
+  </channel>
+</rss>

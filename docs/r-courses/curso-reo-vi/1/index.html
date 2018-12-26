@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>1. R Como calculadora sencilla - Miscellaneous R stuff</title>
+<meta name="generator" content="Hugo 0.52" />
+<link href="/R_stuff/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="/R_stuff/r-courses/curso-reo-vi/1/">
+<link rel="stylesheet" href="/R_stuff/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="/R_stuff/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="/R_stuff/js/functions.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="/R_stuff/js/jquery.backtothetop/jquery.backtothetop.min.js"></script>
+<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet"></head>
+<body>
+<div class="container"><header>
+<h1>Miscellaneous R stuff</h1>
+<a href="https://github.com/Cdevenish/r_stuff" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="menu">
+<nav>
+<ul>
+<li><a href="/R_stuff/">Home</a></li>
+<li><a href="/R_stuff/about/">About me</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>1. R Como calculadora sencilla</h1>
+
+<div class="highlight"><pre class="chroma"><code class="language-r setup, include=FALSE" data-lang="r setup, include=FALSE">knitr::opts_chunk$set(echo = TRUE)</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-r maths" data-lang="r maths">1 + 1
+
+10 - 5
+
+10 / 2
+
+2^3  # potenciación
+
+2 * 5  # sin o con espacios - funciona igual
+
+2*5</code></pre></div>
+<p>Sin embargo, espacios pueden facilitar la lectura</p>
+
+<h3 id="otros-operadores">Otros operadores</h3>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">%%</span> <span class="m">5</span> <span class="c1"># módulo (resto de la división entera). p.ej 10/5 = 2 (sin decimal)</span>
+
+<span class="m">10</span> <span class="o">%%</span> <span class="m">6</span> <span class="c1"># 10/6 = 1 con un resto de 4</span>
+
+<span class="m">17</span> <span class="o">%%</span> <span class="m">12</span> <span class="c1"># p. ej convertir de 24h a 12h</span>
+
+<span class="m">10</span> <span class="o">%/%</span> <span class="m">5</span> <span class="c1"># división entera (resultado de la división sin fracción - convertido en número entero)</span>
+
+<span class="m">10</span> <span class="o">%/%</span> <span class="m">6</span></code></pre></div>
+<h3 id="como-encontrar-ayuda">Como encontrar ayuda</h3>
+
+<p>Para ayuda con los operadores:</p>
+
+<p><code>? Arithmetic</code></p>
+
+<p>O con la función help():
+<code>help(Arithmetic)</code></p>
+
+<p>Ojo con el orden de los operadores&hellip;</p>
+
+<ul>
+<li><code>^</code></li>
+<li><code>%%  %/%</code></li>
+<li><code>*  /</code></li>
+<li><code>+  -</code></li>
+</ul>
+
+<p>Ver
+<code>? Syntax</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">+</span> <span class="m">10</span> <span class="o">/</span> <span class="m">2</span> <span class="o">-</span> <span class="m">1</span>
+
+<span class="p">(</span><span class="m">10</span> <span class="o">+</span> <span class="m">10</span><span class="p">)</span> <span class="o">/</span><span class="m">2</span> <span class="o">-</span> <span class="m">1</span>
+
+<span class="m">8</span> <span class="o">-</span> <span class="m">4</span> <span class="o">*</span> <span class="m">4</span> <span class="o">+</span> <span class="m">2</span> </code></pre></div>
+<p>En RStudio puedes seleccionar una parte del código en el script y ejecutarlo con ctrl + enter</p>
+
+<p>Si no te acuerdas del orden, o tienes dudas, usa parentesis&hellip;.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">+</span> <span class="p">(</span><span class="m">10</span> <span class="o">/</span> <span class="m">2</span><span class="p">)</span> <span class="o">-</span> <span class="m">1</span>
+
+<span class="m">10</span> <span class="o">+</span> <span class="m">10</span> <span class="o">/</span> <span class="m">2</span> <span class="o">-</span> <span class="m">1</span></code></pre></div><div class="edit-meta">Last updated on 1 Jan 0001 / Published on 1 Jan 0001<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/curso-reo-vi/4/" title="Chapter 3-2-4"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Chapter 3-2-4</a>
+<a class="nav nav-next" href="/R_stuff/r-courses/curso-reo-vi/2/" title="Empezando con R">Next - Empezando con R <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> <script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+
+<script>
+hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();
+</script>
+</footer>
+</main><div class="sidebar">
+<nav>
+<ul>
+<li class=""><a href="/R_stuff/">Home</a></li>
+
+<li class=""><a href="/R_stuff/code-examples/">Examples from R packages</a>
+<ul class="">
+<li class=""><a href="/R_stuff/code-examples/2/">Example md page</a></li>
+<li class=""><a href="/R_stuff/code-examples/3/">Chapter 1-3</a></li>
+<li class=""><a href="/R_stuff/code-examples/4/">Chapter 1-4</a></li>
+<li class=""><a href="/R_stuff/code-examples/1/">Basics of creating animated gifs with gifski package in R</a></li>
+</ul>
+  
+</li>
+
+<li class="parent"><a href="/R_stuff/r-courses/">R courses</a>
+<ul class="sub-menu">
+
+<li class="parent"><a href="/R_stuff/r-courses/curso-reo-vi/">Curso R del REO VI</a>
+<ul class="sub-menu">
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/3/">Chapter 3-2-3</a></li>
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/4/">Chapter 3-2-4</a></li>
+<li class="active"><a href="/R_stuff/r-courses/curso-reo-vi/1/">1. R Como calculadora sencilla</a></li>
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/2/">Empezando con R</a></li>
+</ul>
+  
+</li>
+
+<li class=""><a href="/R_stuff/r-courses/mmu-futures-r-course/">MMU Futures R Course</a>
+</li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
