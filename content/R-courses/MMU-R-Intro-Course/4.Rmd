@@ -15,7 +15,7 @@ sparrows <- read.csv("resources/sparrows.csv")
 
 
 ### Getting data from an external source
-Download the data file here - save it in your course folder: [sparrows data in excel](../resources/sparrow.xls)  
+Download the data file here - save it in your course folder: [sparrows data in excel](../resources/sparrows.xlsx)  
 *Get the worksheet here* [worksheet 4](../resources/w04_importingData.r)
 
 Transform an excel file to a csv with *save as* in the *file* menu. Call it *sparrows.csv*

@@ -18,7 +18,7 @@ s1 <- c("a", "b", "c", "d", "e")
 ```
 
 
-### The <<data frame>>  a 'table' in R
+### The **data frame**  a 'table' in R
 *Get the worksheet here* [worksheet 3](../resources/w03_dataframes.r)
 
 
@@ -46,7 +46,7 @@ length(s1)
 class(s1)
 ```
 
-### The <<data frame>>  a 'table' in R
+### The **data frame**  a 'table' in R
 - a basic object to store data in  
   
 
