@@ -3,8 +3,8 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Chapter 3-2-3 - Miscellaneous R stuff</title>
-<meta name="generator" content="Hugo 0.52" />
+<title>3. Data frames - introducción - Miscellaneous R stuff</title>
+<meta name="generator" content="Hugo 0.53" />
 <link href="/R_stuff/index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="/R_stuff/r-courses/curso-reo-vi/3/">
 <link rel="stylesheet" href="/R_stuff/css/theme.min.css">
@@ -28,9 +28,87 @@
 </nav>
 </div>
 <div class="content-container">
-<main><h1>Chapter 3-2-3</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<div class="edit-meta">Last updated on 17 Oct 2017 / Published on 17 Oct 2017<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/curso-reo-vi/" title="Curso R del REO VI"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Curso R del REO VI</a>
-<a class="nav nav-next" href="/R_stuff/r-courses/curso-reo-vi/4/" title="Chapter 3-2-4">Next - Chapter 3-2-4 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<main><h1>3. Data frames - introducción</h1>
+
+<div class="highlight"><pre class="chroma"><code class="language-r setup, include=FALSE" data-lang="r setup, include=FALSE">knitr::opts_chunk$set(echo = TRUE)</code></pre></div>
+<h3 id="el-data-frame-una-tabla-en-r">El Data frame - una &ldquo;tabla&rdquo; en R</h3>
+
+<p>Podemos pensar en el data frame como una colección de vectores del mismo largo</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">v1 <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">2.5</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
+v1
+s1 <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;a&#34;</span><span class="p">,</span> <span class="s">&#34;b&#34;</span><span class="p">,</span> <span class="s">&#34;c&#34;</span><span class="p">,</span> <span class="s">&#34;d&#34;</span><span class="p">,</span> <span class="s">&#34;e&#34;</span><span class="p">)</span>
+s1
+
+df1 <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>Tipo <span class="o">=</span> s1<span class="p">,</span> Valor <span class="o">=</span> v1<span class="p">)</span></code></pre></div>
+<h3 id="es-un-objeto-básico-para-almacenar-datos">Es un objeto básico para almacenar datos</h3>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1 <span class="c1"># A la izquierda se muestra el número de fila</span></code></pre></div>
+<h3 id="importar-datos-a-r">Importar datos a R</h3>
+
+<p>Directamente desde el teclado usando lo que ya vimos</p>
+
+<p><code>v1 &lt;- c(...)</code></p>
+
+<ul>
+<li>Lento</li>
+<li>Normalmente tenemos los datos en otro programa, como excel.</li>
+<li>Incluso, es más fácil ingresar datos en otro programa</li>
+</ul>
+
+<h3 id="importar-desde-excel">Importar desde excel</h3>
+
+<p>Tenemos un ejemplo como este:<br />
+<img src="../images/SparrowFirst_Excel.bmp" alt="Hoja de excel" title="Datos en excel" /></p>
+
+<p><img src="../images/634px-BirdMorphometrics.jpg" alt="Bird measurements" /><br />
+Die Vogel : Handbuch der Systematischen Ornithologie. Volume 1</p>
+
+<h3 id="preparar-los-datos-en-excel-1">Preparar los datos en excel 1</h3>
+
+<p><strong>Formato</strong></p>
+
+<ul>
+<li>Una variable por columna</li>
+<li>Una observación/ un caso/ sujeto, etc., por fila</li>
+<li>Primera columna - identificador de casos</li>
+
+<li><p>Primera fila - nombre (código) del variable - recuerda criterios para nombrar los vectores, es decir:</p>
+
+<ul>
+<li>Sin espacios</li>
+<li>Sin palabras reservadas, nombres de funciones</li>
+<li>No usar simbolos como: ? $ % ^ &amp; * ( ) # ? &lt; &gt; / | \ [ ] { }</li>
+<li>No muy largo (después tienes que escribir estos nombres)</li>
+</ul></li>
+
+<li><p>Llenar con NA donde no hay datos (opcional)</p></li>
+
+<li><p>Chequear los datos antes de importarlos</p></li>
+
+<li><p>Ojo con caracteres especiales como # o &ldquo; en campos de texto</p></li>
+
+<li><p>Borrar columnas y filas vacias aledañas a los datos (a veces quedan &ldquo;restos&rdquo; en filas y columnas que han tenido datos anteriormente)</p></li>
+
+<li><p>Guardar como texto (.csv)</p></li>
+</ul>
+
+<h3 id="guardar-como-texto">Guardar como texto</h3>
+
+<p><img src="../images/sparrowsCSV.png" alt="" /></p>
+
+<p><img src="../images/sparrowsCSV_Screenshot.png" alt="" /></p>
+
+<h3 id="importar-con-read-csv">Importar con read.csv()</h3>
+
+<p>Función básica para importar datos como un data frame</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1 <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&#34;Sparrow_First.csv&#34;</span><span class="p">)</span> <span class="c1"># OJO establecer directorio de trabajo primero o pon ruta completa</span>
+
+<span class="c1"># por ejemplo</span>
+<span class="c1"># df1 &lt;- read.csv(&#34;C:/Documentos/Datos/Sparrow_First.csv&#34;)</span>
+
+<span class="kp">head</span><span class="p">(</span>df1<span class="p">)</span> <span class="c1"># mirar los primeros 6 líneas</span>
+
+str<span class="p">(</span>df1<span class="p">)</span> <span class="c1"># mirar la estructura del data frame</span></code></pre></div><div class="edit-meta">Last updated on 1 Jan 0001 / Published on 1 Jan 0001<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/curso-reo-vi/2/" title="2. Empezando con R"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - 2. Empezando con R</a>
+<a class="nav nav-next" href="/R_stuff/r-courses/curso-reo-vi/4/" title="4. Data frames - manipulación">Next - 4. Data frames - manipulación <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> <script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
 
 <script>
@@ -46,9 +124,7 @@ hljs.initHighlightingOnLoad();
 <li class=""><a href="/R_stuff/code-examples/">Examples from R packages</a>
 <ul class="">
 <li class=""><a href="/R_stuff/code-examples/2/">Example md page</a></li>
-<li class=""><a href="/R_stuff/code-examples/3/">Chapter 1-3</a></li>
-<li class=""><a href="/R_stuff/code-examples/4/">Chapter 1-4</a></li>
-<li class=""><a href="/R_stuff/code-examples/1/">Basics of creating animated gifs with gifski package in R</a></li>
+<li class=""><a href="/R_stuff/code-examples/1/">Creating animated gifs with gifski in R</a></li>
 </ul>
   
 </li>
@@ -58,10 +134,10 @@ hljs.initHighlightingOnLoad();
 
 <li class="parent"><a href="/R_stuff/r-courses/curso-reo-vi/">Curso R del REO VI</a>
 <ul class="sub-menu">
-<li class="active"><a href="/R_stuff/r-courses/curso-reo-vi/3/">Chapter 3-2-3</a></li>
-<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/4/">Chapter 3-2-4</a></li>
 <li class=""><a href="/R_stuff/r-courses/curso-reo-vi/1/">1. R Como calculadora sencilla</a></li>
-<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/2/">Empezando con R</a></li>
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/2/">2. Empezando con R</a></li>
+<li class="active"><a href="/R_stuff/r-courses/curso-reo-vi/3/">3. Data frames - introducción</a></li>
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/4/">4. Data frames - manipulación</a></li>
 </ul>
   
 </li>

@@ -1,5 +1,5 @@
 ---
-title: "Basics of creating animated gifs with gifski package in R"
+title: "Creating animated gifs with gifski in R"
 date: 2018-12-23
 draft: false
 ---

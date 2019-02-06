@@ -21,49 +21,13 @@
     </item>
     
     <item>
-      <title>Chapter 1-3</title>
-      <link>/R_stuff/code-examples/3/</link>
-      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
-      
-      <guid>/R_stuff/code-examples/3/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
-    <item>
-      <title>Chapter 1-4</title>
-      <link>/R_stuff/code-examples/4/</link>
-      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
-      
-      <guid>/R_stuff/code-examples/4/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
-    <item>
-      <title>Basics of creating animated gifs with gifski package in R</title>
+      <title>Creating animated gifs with gifski in R</title>
       <link>/R_stuff/code-examples/1/</link>
       <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/R_stuff/code-examples/1/</guid>
       <description>1a. Convert png files to gif (from help file)In this example, we create a series of pngs (using the png function) and save them in a temporary directory.
 library(gifski)# set up file paths to save the pngspng_path &amp;lt;- file.path(tempdir(), &amp;quot;frame%03d.png&amp;quot;)open the png connection and plotpng(png_path)for(i in 1:10)plot(rnorm(i * 10), main = &amp;quot;&amp;quot;, axes = F, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;&amp;quot;)dev.off()## png ## 2make vector of filenamespng_files &amp;lt;- sprintf(png_path, 1:10)gif_file &amp;lt;- &amp;quot;gif_example.</description>
-    </item>
-    
-    <item>
-      <title>Chapter 3-2-3</title>
-      <link>/R_stuff/r-courses/curso-reo-vi/3/</link>
-      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
-      
-      <guid>/R_stuff/r-courses/curso-reo-vi/3/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
-    <item>
-      <title>Chapter 3-2-4</title>
-      <link>/R_stuff/r-courses/curso-reo-vi/4/</link>
-      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
-      
-      <guid>/R_stuff/r-courses/curso-reo-vi/4/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
     <item>
@@ -86,7 +50,7 @@ Otros operadores 10 %% 5 # módulo (resto de la división entera). p.ej 10/5 = 2
     </item>
     
     <item>
-      <title>Empezando con R</title>
+      <title>2. Empezando con R</title>
       <link>/R_stuff/r-courses/curso-reo-vi/2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -100,6 +64,29 @@ Tipos de datos  Numérico (numeric) &amp;ndash; variable continuo &amp;ndash; va
  Carácter (character, string) &amp;ndash; texto
  Lógico (logical) TRUE FALSE
   Vector con un solo dato numérico a &amp;lt;- 1 b &amp;lt;- 5 x &amp;lt;- 100 # Operador de asignación: &amp;lt;- a x ###Para nombrar variables&amp;hellip; - No usar palabras reservadas</description>
+    </item>
+    
+    <item>
+      <title>3. Data frames - introducción</title>
+      <link>/R_stuff/r-courses/curso-reo-vi/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/curso-reo-vi/3/</guid>
+      <description>knitr::opts_chunk$set(echo = TRUE) El Data frame - una &amp;ldquo;tabla&amp;rdquo; en R Podemos pensar en el data frame como una colección de vectores del mismo largo
+v1 &amp;lt;- c(5,2.5,3,10,5) v1 s1 &amp;lt;- c(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;d&amp;#34;, &amp;#34;e&amp;#34;) s1 df1 &amp;lt;- data.frame(Tipo = s1, Valor = v1) Es un objeto básico para almacenar datos df1 # A la izquierda se muestra el número de fila Importar datos a R Directamente desde el teclado usando lo que ya vimos</description>
+    </item>
+    
+    <item>
+      <title>4. Data frames - manipulación</title>
+      <link>/R_stuff/r-courses/curso-reo-vi/4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/curso-reo-vi/4/</guid>
+      <description>knitr::opts_chunk$set(echo = TRUE) Data Frames Un objeto básico para guardar datos  ¿Que es un data frame?
+ Construir un data frame
+ Ver el contenido de un data frame
+ Indexar un data frame (acceder a ciertos valores, filas, columnas)
+  ¿Qué es un data frame?  Es un objeto para guardar datos (parece una tabla) Se puede pensar como una colección de vectores de diferentes tipos (númerico, caracter, lógico) Los vectores suelen combinarse para que cada vector sea una columna del data frame Los vectores deben tener el mismo largo - ver función: length() - para un vector, es el número de elementos Una organización muy común es una variable por columna, una observación por fila Primera columna - identificador de casos; primera fila - nombre de la variable  ¿Cómo se organiza un data frame?</description>
     </item>
     
   </channel>

@@ -3,8 +3,8 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Chapter 3-2-4 - Miscellaneous R stuff</title>
-<meta name="generator" content="Hugo 0.52" />
+<title>4. Data frames - manipulación - Miscellaneous R stuff</title>
+<meta name="generator" content="Hugo 0.53" />
 <link href="/R_stuff/index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="/R_stuff/r-courses/curso-reo-vi/4/">
 <link rel="stylesheet" href="/R_stuff/css/theme.min.css">
@@ -28,9 +28,203 @@
 </nav>
 </div>
 <div class="content-container">
-<main><h1>Chapter 3-2-4</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<div class="edit-meta">Last updated on 17 Oct 2017 / Published on 17 Oct 2017<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/curso-reo-vi/3/" title="Chapter 3-2-3"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Chapter 3-2-3</a>
-<a class="nav nav-next" href="/R_stuff/r-courses/curso-reo-vi/1/" title="1. R Como calculadora sencilla">Next - 1. R Como calculadora sencilla <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<main><h1>4. Data frames - manipulación</h1>
+
+<div class="highlight"><pre class="chroma"><code class="language-r setup, include=FALSE" data-lang="r setup, include=FALSE">knitr::opts_chunk$set(echo = TRUE)</code></pre></div>
+<h1 id="data-frames">Data Frames</h1>
+
+<h3 id="un-objeto-básico-para-guardar-datos">Un objeto básico para guardar datos</h3>
+
+<ol>
+<li><p>¿Que es un data frame?</p></li>
+
+<li><p>Construir un data frame</p></li>
+
+<li><p>Ver el contenido de un data frame</p></li>
+
+<li><p>Indexar un data frame (acceder a ciertos valores, filas, columnas)</p></li>
+</ol>
+
+<h3 id="qué-es-un-data-frame">¿Qué es un data frame?</h3>
+
+<ul>
+<li>Es un objeto para guardar datos (parece una tabla)</li>
+<li>Se puede pensar como una colección de vectores de diferentes tipos (númerico, caracter, lógico)</li>
+<li>Los vectores suelen combinarse para que cada vector sea una columna del data frame</li>
+<li>Los vectores deben tener el mismo largo - ver función: <code>length()</code> - para un vector, es el número de elementos</li>
+<li>Una organización muy común es una variable por columna, una observación por fila</li>
+<li>Primera columna - identificador de casos; primera fila - nombre de la variable</li>
+</ul>
+
+<p>¿Cómo se organiza un data frame?</p>
+
+<p>Riqueza de plantas y biomasa en parcelas con tres diferentes pH de suelo (alto, medio, baja)</p>
+
+<p><img src="../images/species_df_example.png" alt="" /></p>
+
+<p>¿Cuántas variables hay? ¿Cómo se llaman? ¿Cuáles son los casos?</p>
+
+<h3 id="cómo-se-organiza-un-data-frame">¿Cómo se organiza un data frame?</h3>
+
+<p><img src="../images/species_df_example2.png" alt="" /></p>
+
+<p><br>
+Tres variables:<br />
+* categórico (pH)
+* conteo (no. especies)
+* continuo (biomasa)</p>
+
+<h3 id="construir-un-data-frame-desde-vectores">Construir un data frame desde vectores</h3>
+
+<p>Un ejemplo sencillo con tres vectores:</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">id <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">8</span>
+nom <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;aa&#34;</span><span class="p">,</span> <span class="s">&#34;aa&#34;</span><span class="p">,</span> <span class="s">&#34;aa&#34;</span><span class="p">,</span> <span class="s">&#34;aa&#34;</span><span class="p">,</span> <span class="s">&#34;bb&#34;</span><span class="p">,</span> <span class="s">&#34;bb&#34;</span><span class="p">,</span> <span class="s">&#34;bb&#34;</span><span class="p">,</span> <span class="s">&#34;bb&#34;</span><span class="p">)</span>
+val <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">2.0</span><span class="p">,</span> <span class="m">6.5</span><span class="p">,</span> <span class="m">3.2</span><span class="p">,</span> <span class="m">1.5</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">9.8</span><span class="p">,</span> <span class="m">7.4</span><span class="p">,</span> <span class="m">1.0</span><span class="p">)</span>
+
+df1 <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>ID <span class="o">=</span> id<span class="p">,</span> Nombre <span class="o">=</span> nom<span class="p">,</span> Valor <span class="o">=</span> val<span class="p">)</span>
+
+df1</code></pre></div>
+<p>Normalmente importamos datos directo a un data frame con una función como <code>read.csv()</code></p>
+
+<h3 id="nombres-de-las-columnas-filas">Nombres de las columnas, filas</h3>
+
+<p>Usar las funciones <code>colnames()</code>, <code>rownames()</code> tanto para asignar como devolver los nombres</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">colnames</span><span class="p">(</span>df1<span class="p">)</span>
+
+<span class="kp">rownames</span><span class="p">(</span>df1<span class="p">)</span></code></pre></div>
+<h3 id="asignar-nombres">Asignar nombres</h3>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">colnames</span><span class="p">(</span>df1<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Sitio&#34;</span><span class="p">,</span> <span class="s">&#34;Especie&#34;</span><span class="p">,</span> <span class="s">&#34;Densidad&#34;</span><span class="p">)</span>
+
+df1</code></pre></div>
+<p>El resultado de <code>colnames()</code> es un vector. Lo podemos indexar con [] para acceder a valores específicos</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">colnames</span><span class="p">(</span>df1<span class="p">)[</span><span class="m">1</span><span class="p">]</span></code></pre></div>
+<p>Y asignar un nombre específico</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">colnames</span><span class="p">(</span>df1<span class="p">)[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&#34;Parcela&#34;</span>
+<span class="kp">head</span><span class="p">(</span>df1<span class="p">,</span> <span class="m">1</span><span class="p">)</span></code></pre></div>
+<h2 id="ver-el-contenido-y-tipo-de-datos-en-un-data-frame">Ver el contenido y tipo de datos en un data frame</h2>
+
+<p>La función <code>head()</code> te deja ver las 6 primeras filas del dataframe</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">head</span><span class="p">(</span>df1<span class="p">)</span> </code></pre></div>
+<p>Puedes controlar cuantas filas con el segundo argumento <code>?head</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">head</span><span class="p">(</span>df1<span class="p">,</span> <span class="m">10</span><span class="p">)</span></code></pre></div>
+<p>La función <code>tail()</code> hace lo mismo, desde abajo (tail =  cola)</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">tail</span><span class="p">(</span>df1<span class="p">)</span></code></pre></div>
+<h3 id="que-tipo-de-datos-hay-en-el-data-frame">Que tipo de datos hay en el data frame</h3>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">str<span class="p">(</span>df1<span class="p">)</span></code></pre></div>
+<p>Dos variables númericos (uno son números enteros - no decimales), y un factor con dos niveles</p>
+
+<h3 id="factores">Factores</h3>
+
+<ul>
+<li>Usamos factores para datos categóricos.
+
+<ul>
+<li>Por ejemplo, tipo de hábitat, amenazas para biodiversidad, unidad taxonómico, sexo, distancia en bandas, etc.</li>
+</ul></li>
+<li>Clasifican a los datos (levels)</li>
+<li>Pueden ser ordenados o sin orden (ver <code>? factor</code>)</li>
+<li>Cuando importamos a un data frame, texto es convertido en factor<br /></li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1<span class="o">$</span>Especie</code></pre></div>
+<p>(R los trata como un vector de números enteros con un descriptor (label))</p>
+
+<h3 id="acceder-a-datos-en-un-data-frame">Acceder a datos en un data frame</h3>
+
+<p>Usar el símbolo <code>$</code> con el nombre de la columna p.ej. <code>df1$Especie</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1<span class="o">$</span>Especie <span class="c1"># tiene que ser el nombre de la columna exacto</span></code></pre></div>
+<p>Para limitar lo que se muestra en la consola</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">head</span><span class="p">(</span>df1<span class="o">$</span>Especie<span class="p">)</span></code></pre></div>
+<h3 id="usar-un-índice-en-corchetes">Usar un índice en corchetes []</h3>
+
+<p>Recuerda como indexar un vector</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">a <span class="o">&lt;-</span> <span class="kc">letters</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">]</span>
+b <span class="o">&lt;-</span> <span class="m">50</span><span class="o">:</span><span class="m">100</span>
+
+a<span class="p">[</span><span class="m">1</span><span class="p">]</span>
+
+b<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">]</span></code></pre></div>
+<h3 id="acceder-a-un-data-frame-con-un-índice">Acceder a un data frame con un índice []</h3>
+
+<p>Piensa en <code>[fila, columna]</code> (dos dimensiones)</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1<span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">]</span> <span class="c1"># devuelve el elemento de la segunda fila, en la tercera columna</span>
+
+df1<span class="p">[</span><span class="m">2</span><span class="o">:</span><span class="m">4</span><span class="p">,</span><span class="m">3</span><span class="p">]</span> <span class="c1"># devuelve los elementos desde la segunda hasta la cuarta fila, en la tercera columna</span>
+
+df1<span class="p">[</span><span class="m">2</span><span class="p">,]</span> <span class="c1"># devuelve TODOS los elementos de la segunda fila</span>
+
+df1<span class="p">[,</span><span class="m">3</span><span class="p">]</span> <span class="c1"># devuelve TODOS los elementos de la tercera columna</span></code></pre></div>
+<p>Es lo mismo que usar $Densidad</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1<span class="o">$</span>Densidad</code></pre></div>
+<p><strong>Ojo con las dimensiones</strong>&hellip; cuando usamos coma, y cuando no</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1<span class="p">[</span><span class="m">2</span><span class="o">:</span><span class="m">4</span><span class="p">,</span><span class="m">3</span><span class="p">]</span> <span class="c1"># devuelve los elementos desde la segunda hasta la cuarta fila, en la tercera columna</span>
+
+<span class="c1"># Comparar con</span>
+
+df1<span class="o">$</span>Densidad<span class="p">[</span><span class="m">2</span><span class="o">:</span><span class="m">4</span><span class="p">]</span>  <span class="c1"># OJO Ya no usamos la coma, df1$Densidad es un vector (de una dimension)</span></code></pre></div>
+<p>Usar múltiples valores en el índice:</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="m">3</span><span class="p">]</span> <span class="c1"># devuelve los elementos 1, 3 y 5 de la tercera columna</span></code></pre></div>
+<p>Usar valores lógicos en el índice</p>
+
+<p>Para un vector:</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">b <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
+ind <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="bp">T</span><span class="p">,</span> <span class="bp">F</span><span class="p">,</span> <span class="bp">T</span><span class="p">,</span> <span class="bp">F</span><span class="p">,</span> <span class="bp">T</span><span class="p">)</span> <span class="c1"># podemos usar T o F para TRUE/FALSE</span>
+
+b<span class="p">[</span>ind<span class="p">]</span></code></pre></div>
+<p>Devuelve los valores que corresponden a la posición de <code>TRUE</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1<span class="p">[</span>df1<span class="o">$</span>Densidad<span class="o">&gt;</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">]</span> <span class="c1"># devuelve los elementos &gt; 2 en la tercera columna</span>
+
+df1<span class="o">$</span>Densidad
+
+<span class="c1"># ver el resultado de</span>
+
+df1<span class="o">$</span>Densidad<span class="o">&gt;</span><span class="m">2</span></code></pre></div>
+<p>¿Que índice necesitamos para que dé este resultado?</p>
+
+<p><code># 9.8</code><br />
+<code>df1[ ?  , ? ]</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-r{" data-lang="r{">df1</code></pre></div>
+<p>Sexta fila, tercera columna</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1<span class="p">[</span><span class="m">6</span><span class="p">,</span><span class="m">3</span><span class="p">]</span></code></pre></div>
+<p>¿Que índice necesitamos para que dé este resultado?</p>
+
+<p><code>0.5 9.8 7.4</code>
+<code>df1[ ? , ? ]</code></p>
+
+<p>Elementos 5, 6 y 7 de la tercera columna</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1<span class="p">[</span><span class="m">5</span><span class="o">:</span><span class="m">7</span><span class="p">,</span><span class="m">3</span><span class="p">]</span></code></pre></div>
+<p>¿Que índice necesitamos para que dé este resultado?</p>
+
+<p><code>#  Nombre Valor</code>
+<code>#  aa     1.5</code>
+<code>#  bb     0.5</code></p>
+
+<p><code># df1[ ? ,  ?]</code></p>
+
+<p>Elementos 4 y 5 de la segunda y tercera columna</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1<span class="p">[</span><span class="m">4</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span></code></pre></div>
+<h3 id="función-subset">Función <code>subset()</code></h3>
+
+<p>Otra forma de obtener un subconjunto de datos de un data frame es con la función <code>subset()</code></p>
+
+<p><strong>Estructura</strong>
+Tiene dos argumentos para hacer la selección:</p>
+
+<p><code>subset(x, subset, select)</code></p>
+
+<p><code>subset</code> : expresión lógica (tiene que evaluarse a TRUE o FALSE)<br />
+<code>select</code> : selecciona cuales columnas se debe devolver</p>
+
+<p>Queremos selecionar las columnas &ldquo;Especie&rdquo; y &ldquo;Densidad&rdquo;, que tienen el valor de densidad &gt; 2.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">subset</span><span class="p">(</span>df1<span class="p">,</span> subset <span class="o">=</span> Densidad <span class="o">&gt;</span> <span class="m">2</span><span class="p">,</span> select <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>Especie<span class="p">,</span> Densidad<span class="p">))</span></code></pre></div>
+<p>Seleccionar todos los datos de la especie &ldquo;aa&rdquo;</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">sub.aa <span class="o">&lt;-</span> <span class="kp">subset</span><span class="p">(</span>df1<span class="p">,</span> subset <span class="o">=</span> Especie <span class="o">==</span> <span class="s">&#34;aa&#34;</span><span class="p">)</span> <span class="c1"># asignarlo a un objeto `sub.aa`</span></code></pre></div>
+<p>Podemos omitir el argumento <code>select</code> si queremos un subconjunto de todas las columnas.</p>
+
+<p>Fíjate bien como se escribe la expresión lógica para selecionar a la especie.</p>
+
+<p>En <code>subset</code> no es necesario usar la notación <code>df1$Especie</code> en la expresión lógica</p>
+<div class="edit-meta">Last updated on 1 Jan 0001 / Published on 1 Jan 0001<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/curso-reo-vi/3/" title="3. Data frames - introducción"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - 3. Data frames - introducción</a>
+<a class="nav nav-next" href="/R_stuff/r-courses/mmu-futures-r-course/" title="MMU Futures R Course">Next - MMU Futures R Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> <script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
 
 <script>
@@ -46,9 +240,7 @@ hljs.initHighlightingOnLoad();
 <li class=""><a href="/R_stuff/code-examples/">Examples from R packages</a>
 <ul class="">
 <li class=""><a href="/R_stuff/code-examples/2/">Example md page</a></li>
-<li class=""><a href="/R_stuff/code-examples/3/">Chapter 1-3</a></li>
-<li class=""><a href="/R_stuff/code-examples/4/">Chapter 1-4</a></li>
-<li class=""><a href="/R_stuff/code-examples/1/">Basics of creating animated gifs with gifski package in R</a></li>
+<li class=""><a href="/R_stuff/code-examples/1/">Creating animated gifs with gifski in R</a></li>
 </ul>
   
 </li>
@@ -58,10 +250,10 @@ hljs.initHighlightingOnLoad();
 
 <li class="parent"><a href="/R_stuff/r-courses/curso-reo-vi/">Curso R del REO VI</a>
 <ul class="sub-menu">
-<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/3/">Chapter 3-2-3</a></li>
-<li class="active"><a href="/R_stuff/r-courses/curso-reo-vi/4/">Chapter 3-2-4</a></li>
 <li class=""><a href="/R_stuff/r-courses/curso-reo-vi/1/">1. R Como calculadora sencilla</a></li>
-<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/2/">Empezando con R</a></li>
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/2/">2. Empezando con R</a></li>
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/3/">3. Data frames - introducción</a></li>
+<li class="active"><a href="/R_stuff/r-courses/curso-reo-vi/4/">4. Data frames - manipulación</a></li>
 </ul>
   
 </li>

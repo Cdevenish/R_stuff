@@ -13,18 +13,8 @@
   </url>
   
   <url>
-    <loc>/R_stuff/code-examples/3/</loc>
-    <lastmod>2017-10-17T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/R_stuff/r-courses/</loc>
     <lastmod>2018-12-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/R_stuff/code-examples/4/</loc>
-    <lastmod>2017-10-17T15:26:15+00:00</lastmod>
   </url>
   
   <url>
@@ -43,16 +33,6 @@
   </url>
   
   <url>
-    <loc>/R_stuff/r-courses/curso-reo-vi/3/</loc>
-    <lastmod>2017-10-17T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/R_stuff/r-courses/curso-reo-vi/4/</loc>
-    <lastmod>2017-10-17T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/R_stuff/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
@@ -62,12 +42,20 @@
   </url>
   
   <url>
-    <loc>/R_stuff/categories/</loc>
-    <priority>0</priority>
+    <loc>/R_stuff/r-courses/curso-reo-vi/2/</loc>
   </url>
   
   <url>
-    <loc>/R_stuff/r-courses/curso-reo-vi/2/</loc>
+    <loc>/R_stuff/r-courses/curso-reo-vi/3/</loc>
+  </url>
+  
+  <url>
+    <loc>/R_stuff/r-courses/curso-reo-vi/4/</loc>
+  </url>
+  
+  <url>
+    <loc>/R_stuff/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
