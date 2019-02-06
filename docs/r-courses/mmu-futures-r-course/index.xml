@@ -10,5 +10,25 @@
 	<atom:link href="/R_stuff/r-courses/mmu-futures-r-course/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>MMU Futures R Course</title>
+      <link>/R_stuff/r-courses/mmu-futures-r-course/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-futures-r-course/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Science &amp; Engineering Extracurricular Award - Introduction to R</title>
+      <link>/R_stuff/r-courses/mmu-futures-r-course/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-futures-r-course/2/</guid>
+      <description>R as a calculator
+ Vectors, variables and other objects
+  1. type: sub-section R as a calculator 1.1 R as a calculator 1 + 1 [1] 2  10 - 5 [1] 5  10 / 2 [1] 5  2^3 # to the power of [1] 8  2 * 5 # with or without spaces [1] 10  2*5 [1] 10  Spaces can make it easier to read the code</description>
+    </item>
+    
   </channel>
 </rss>

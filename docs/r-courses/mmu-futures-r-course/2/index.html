@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Science &amp; Engineering Extracurricular Award - Introduction to R - Miscellaneous R stuff</title>
+<meta name="generator" content="Hugo 0.53" />
+<link href="/R_stuff/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="/R_stuff/r-courses/mmu-futures-r-course/2/">
+<link rel="stylesheet" href="/R_stuff/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="/R_stuff/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="/R_stuff/js/functions.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="/R_stuff/js/jquery.backtothetop/jquery.backtothetop.min.js"></script>
+<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet"></head>
+<body>
+<div class="container"><header>
+<h1>Miscellaneous R stuff</h1>
+<a href="https://github.com/Cdevenish/r_stuff" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="menu">
+<nav>
+<ul>
+<li><a href="/R_stuff/">Home</a></li>
+<li><a href="/R_stuff/about/">About me</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Science &amp; Engineering Extracurricular Award - Introduction to R</h1>
+
+<ol>
+<li><p>R as a calculator</p></li>
+
+<li><p>Vectors, variables and other objects</p></li>
+</ol>
+
+<h1 id="1">1.</h1>
+
+<p>type: sub-section
+<br><br></p>
+
+<h1 id="r-as-a-calculator">R as a calculator</h1>
+
+<h1 id="1-1-r-as-a-calculator">1.1 R as a calculator</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">1</span> <span class="o">+</span> <span class="m">1</span></code></pre></div>
+<pre><code>[1] 2
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">-</span> <span class="m">5</span></code></pre></div>
+<pre><code>[1] 5
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">/</span> <span class="m">2</span></code></pre></div>
+<pre><code>[1] 5
+</code></pre>
+
+<hr />
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">2</span><span class="o">^</span><span class="m">3</span>  <span class="c1"># to the power of</span></code></pre></div>
+<pre><code>[1] 8
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">2</span> <span class="o">*</span> <span class="m">5</span>  <span class="c1"># with or without spaces</span></code></pre></div>
+<pre><code>[1] 10
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">2</span><span class="o">*</span><span class="m">5</span></code></pre></div>
+<pre><code>[1] 10
+</code></pre>
+
+<p><small>Spaces can make it easier to read the code</small></p>
+
+<h1 id="1-2-r-as-a-calculator">1.2 R as a calculator</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">%%</span> <span class="m">5</span> <span class="c1"># modulo (remainder after division)</span></code></pre></div>
+<pre><code>[1] 0
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">%%</span> <span class="m">6</span></code></pre></div>
+<pre><code>[1] 4
+</code></pre>
+
+<h1 id="1-3-r-as-a-calculator">1.3 R as a calculator</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">%/%</span> <span class="m">5</span> <span class="c1"># integer division (result of division to nearest integer)</span></code></pre></div>
+<pre><code>[1] 2
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">%/%</span> <span class="m">6</span></code></pre></div>
+<pre><code>[1] 1
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">18</span> <span class="o">%%</span> <span class="m">12</span> <span class="c1"># e.g. conver 24h to 12h</span></code></pre></div>
+<pre><code>[1] 6
+</code></pre>
+
+<h1 id="1-4-r-as-a-calculator">1.4 R as a calculator</h1>
+
+<p>Get help with arithmetic operators:
+<code>? Arithmetic</code></p>
+
+<p>Or using the <code>help()</code> function:
+<code>help(Arithmetic)</code></p>
+
+<p>Careful with the order of operators&hellip;</p>
+
+<ul>
+<li><code>^</code></li>
+<li><code>%%  %/%</code></li>
+<li><code>*  /</code></li>
+<li><code>+  -</code></li>
+</ul>
+
+<p>See
+<code>? Syntax</code></p>
+
+<h1 id="1-5-r-as-a-calculator">1.5 R as a calculator</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">+</span> <span class="m">10</span> <span class="o">/</span> <span class="m">2</span> <span class="o">-</span> <span class="m">1</span></code></pre></div>
+<pre><code>[1] 14
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="p">(</span><span class="m">10</span> <span class="o">+</span> <span class="m">10</span><span class="p">)</span> <span class="o">/</span><span class="m">2</span> <span class="o">-</span> <span class="m">1</span></code></pre></div>
+<pre><code>[1] 9
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">8</span> <span class="o">-</span> <span class="m">4</span> <span class="o">*</span> <span class="m">4</span> <span class="o">+</span> <span class="m">2</span> </code></pre></div>
+<pre><code>[1] -6
+</code></pre>
+
+<h1 id="1-6-r-as-a-calculator">1.6 R as a calculator</h1>
+
+<p>If you&rsquo;re not sure about the order&hellip; use round brackets (parenthesis)</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">+</span> <span class="p">(</span><span class="m">10</span> <span class="o">/</span> <span class="m">2</span><span class="p">)</span> <span class="o">-</span> <span class="m">1</span></code></pre></div>
+<pre><code>[1] 14
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">+</span> <span class="m">10</span> <span class="o">/</span> <span class="m">2</span> <span class="o">-</span> <span class="m">1</span></code></pre></div>
+<pre><code>[1] 14
+</code></pre>
+
+<h1 id="2">2.</h1>
+
+<p>type: sub-section
+<br><br></p>
+
+<h1 id="vectors-variables-and-other-objects">Vectors, variables and other objects</h1>
+
+<h1 id="2-1-what-is-a-vector">2.1 What is a vector?</h1>
+
+<h3 id="ordered-collection-of-data">Ordered collection of data</h3>
+
+<p>For example, it could be a single column of a table
+<br></p>
+
+<pre><code>[1] 0.79 0.63 0.53 0.46 0.46 0.29 0.80 0.74
+</code></pre>
+
+<p>Or a single value
+<br></p>
+
+<pre><code>[1] 3.141593
+</code></pre>
+
+<h1 id="2-2-types-of-vector">2.2 Types of vector</h1>
+
+<p><br>
+- Numeric
+ - continuous
+ - integer</p>
+
+<ul>
+<li><p>Character (string)</p>
+
+<ul>
+<li>text</li>
+</ul></li>
+
+<li><p>Logical
+TRUE or FALSE</p></li>
+</ul>
+
+<h1 id="2-3-vector-with-a-single-numeric-item">2.3 Vector with a single numeric item</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">a <span class="o">&lt;-</span> <span class="m">1</span>
+b <span class="o">&lt;-</span> <span class="m">5</span>
+x <span class="o">&lt;-</span> <span class="m">100</span>
+<span class="c1"># note the assign operator: &lt;-  </span>
+<span class="c1"># this means assign value on the right hand side to the variable/object name on the left</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">a</code></pre></div>
+<pre><code>[1] 1
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">x</code></pre></div>
+<pre><code>[1] 100
+</code></pre>
+
+<hr />
+
+<p><small> <strong>Naming objects&hellip;</strong>
+- Don&rsquo;t use <em>reserved</em> words:
+<code>? reserved</code>
+- Best not to use function names
+- Don&rsquo;t begin with a number
+- Sensitive to upper and lower case
+- Don&rsquo;t use spaces
+- Don&rsquo;t use symbols such as £ $ % ^ &amp; * ( ) # ? &lt; &gt; / | \ [ ] { }
+</small></p>
+
+<h1 id="2-4-operations-with-vectors-1">2.4 Operations with vectors 1</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">a <span class="o">+</span> b</code></pre></div>
+<pre><code>[1] 6
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="p">(</span>a <span class="o">+</span> b<span class="p">)</span> <span class="o">*</span> x</code></pre></div>
+<pre><code>[1] 600
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">a <span class="o">/</span> x</code></pre></div>
+<pre><code>[1] 0.01
+</code></pre>
+
+<hr />
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">sum</span><span class="p">(</span>a<span class="p">,</span> b<span class="p">)</span></code></pre></div>
+<pre><code>[1] 6
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">sqrt</span><span class="p">(</span>x<span class="p">)</span></code></pre></div>
+<pre><code>[1] 10
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">log10</span><span class="p">(</span>x<span class="p">)</span></code></pre></div>
+<pre><code>[1] 2
+</code></pre>
+
+<h1 id="2-5-character-vectors">2.5 Character vectors</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">a <span class="o">&lt;-</span> <span class="s">&#34;Hello&#34;</span>  <span class="c1"># text ALWAYS in &#34;quotes&#34;</span>
+b <span class="o">&lt;-</span> <span class="s">&#34;World&#34;</span>
+sp1 <span class="o">&lt;-</span> <span class="s">&#34;Phytotoma raimondii&#34;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">a  <span class="c1"># the object name is not in quotes</span></code></pre></div>
+<pre><code>[1] &quot;Hello&quot;
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">sp1</code></pre></div>
+<pre><code>[1] &quot;Phytotoma raimondii&quot;
+</code></pre>
+
+<h1 id="2-6-text-operations">2.6 Text operations</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># Print to the console</span>
+<span class="kp">print</span><span class="p">(</span>a<span class="p">)</span></code></pre></div>
+<pre><code>[1] &quot;Hello&quot;
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># Concatenate text</span>
+<span class="kp">paste</span><span class="p">(</span>a<span class="p">,</span> b<span class="p">)</span></code></pre></div>
+<pre><code>[1] &quot;Hello World&quot;
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># and with a separator</span>
+<span class="kp">paste</span><span class="p">(</span>a<span class="p">,</span> sp1<span class="p">,</span> sep<span class="o">=</span><span class="s">&#34;, &#34;</span><span class="p">)</span></code></pre></div>
+<pre><code>[1] &quot;Hello, Phytotoma raimondii&quot;
+</code></pre>
+
+<h1 id="2-7-vectors-with-more-than-one-element">2.7 Vectors with more than one element</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">1</span><span class="o">:</span><span class="m">10</span> <span class="c1"># generate a series in steps of 1</span></code></pre></div>
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># Use the combine c() function and assign to a vector called v1</span>
+v1 <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
+v2 <span class="o">&lt;-</span> <span class="m">5</span><span class="o">:</span><span class="m">10</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">v2</code></pre></div>
+<pre><code>[1]  5  6  7  8  9 10
+</code></pre>
+
+<p><strong>Vectors only allow one data type (numeric, character, logical)</strong></p>
+
+<h1 id="2-8-vector-operations-2">2.8 Vector operations 2</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">v1 <span class="o">*</span> <span class="m">3</span>  <span class="c1"># cf. to excel</span></code></pre></div>
+<pre><code>[1]  3  6  9 12 15
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">v1 <span class="o">+</span> v2</code></pre></div>
+<pre><code>[1]  6  8 10 12 14 11
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">mean</span><span class="p">(</span>v1<span class="p">)</span></code></pre></div>
+<pre><code>[1] 3
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">sum</span><span class="p">(</span>v1<span class="p">)</span><span class="o">/</span><span class="kp">length</span><span class="p">(</span>v1<span class="p">)</span></code></pre></div>
+<pre><code>[1] 3
+</code></pre>
+
+<h1 id="2-9-getting-a-value-within-a-vector-with-indices">2.9 Getting a value within a vector with indices []</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">v1 <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">);</span> v1</code></pre></div>
+<pre><code>[1] 1 2 3 4 5
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">v1<span class="p">[</span><span class="m">3</span><span class="p">]</span>  <span class="c1"># get the 3rd element of the vector v1</span></code></pre></div>
+<pre><code>[1] 3
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">v1<span class="p">[</span><span class="m">2</span><span class="o">:</span><span class="m">4</span><span class="p">]</span> <span class="c1"># get elements 2 to 4 of v1</span></code></pre></div>
+<pre><code>[1] 2 3 4
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">v1<span class="p">[</span><span class="m">-1</span><span class="p">]</span> <span class="c1"># get all elements of v1 except for the first</span></code></pre></div>
+<pre><code>[1] 2 3 4 5
+</code></pre>
+
+<h1 id="2-9-series-of-letters">2.9 Series of letters</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">s1 <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;a&#34;</span><span class="p">,</span> <span class="s">&#34;b&#34;</span><span class="p">,</span> <span class="s">&#34;c&#34;</span><span class="p">,</span> <span class="s">&#34;d&#34;</span><span class="p">,</span> <span class="s">&#34;e&#34;</span><span class="p">)</span> <span class="c1"># note the c() function</span>
+s2 <span class="o">&lt;-</span> <span class="kc">letters</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">]</span>  <span class="c1"># letters is a ready-made object inside R</span>
+s3 <span class="o">&lt;-</span> <span class="kc">LETTERS</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">]</span>  <span class="c1"># see ? Constants</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">s2</code></pre></div>
+<pre><code>[1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">s3</code></pre></div>
+<pre><code>[1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot;
+</code></pre>
+
+<h1 id="2-10-getting-an-elements-in-a-character-vector">2.10 Getting an elements in a character vector</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">s1<span class="p">[</span><span class="m">1</span><span class="p">]</span></code></pre></div>
+<pre><code>[1] &quot;a&quot;
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">s1<span class="p">[</span><span class="m">4</span><span class="o">:</span><span class="m">5</span><span class="p">]</span></code></pre></div>
+<pre><code>[1] &quot;d&quot; &quot;e&quot;
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">sp1<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="c1"># Is this what you expected?</span></code></pre></div>
+<pre><code>[1] &quot;Phytotoma raimondii&quot;
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">s1<span class="p">[</span><span class="m">-2</span><span class="p">]</span></code></pre></div>
+<pre><code>[1] &quot;a&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;
+</code></pre>
+
+<h1 id="2-11-the-data-frame-a-table-in-r">2.11 The &lt;<data frame>&gt;  a &lsquo;table&rsquo; in R</h1>
+
+<p>We can think of a data frame as a collection of vectors of the same length. For example, let&rsquo;s combine two vectors into a data frame</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># Think back to this vector:</span>
+v1</code></pre></div>
+<pre><code>[1] 1 2 3 4 5
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># How long is it?</span>
+<span class="kp">length</span><span class="p">(</span>v1<span class="p">)</span></code></pre></div>
+<pre><code>[1] 5
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># What type are they?</span>
+<span class="kp">class</span><span class="p">(</span>v1<span class="p">)</span></code></pre></div>
+<pre><code>[1] &quot;numeric&quot;
+</code></pre>
+
+<h1 id="2-11-the-data-frame-a-table-in-r-1">2.11 The &lt;<data frame>&gt;  a &lsquo;table&rsquo; in R</h1>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># Think back to this vector:</span>
+s1</code></pre></div>
+<pre><code>[1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># How long is it?</span>
+<span class="kp">length</span><span class="p">(</span>s1<span class="p">)</span></code></pre></div>
+<pre><code>[1] 5
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># What type are they?</span>
+<span class="kp">class</span><span class="p">(</span>s1<span class="p">)</span></code></pre></div>
+<pre><code>[1] &quot;character&quot;
+</code></pre>
+
+<h1 id="2-13-data-frame">2.13 Data frame</h1>
+
+<ul>
+<li>a basic object to store data in<br />
+<br /></li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">df1 <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>Type <span class="o">=</span> s1<span class="p">,</span> Value <span class="o">=</span> v1<span class="p">)</span>
+df1</code></pre></div>
+<pre><code>  Type Value
+1    a     1
+2    b     2
+3    c     3
+4    d     4
+5    e     5
+</code></pre>
+
+<p><strong>Vectors combined into a data frame must be of same length</strong></p>
+<div class="edit-meta">Last updated on 1 Jan 0001 / Published on 1 Jan 0001<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/mmu-futures-r-course/1/" title="MMU Futures R Course"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - MMU Futures R Course</a>
+<a class="nav nav-next" href="/R_stuff/r-courses/mmu-futures-r-course/1/" title="MMU Futures R Course">Next - MMU Futures R Course <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> <script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+
+<script>
+hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();
+</script>
+</footer>
+</main><div class="sidebar">
+<nav>
+<ul>
+<li class=""><a href="/R_stuff/">Home</a></li>
+
+<li class=""><a href="/R_stuff/code-examples/">Examples from R packages</a>
+<ul class="">
+<li class=""><a href="/R_stuff/code-examples/1/">Creating animated gifs with gifski in R</a></li>
+</ul>
+  
+</li>
+
+<li class="parent"><a href="/R_stuff/r-courses/">R courses</a>
+<ul class="sub-menu">
+
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/">Curso R del REO VI</a>
+<ul class="">
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/1/">1. R Como calculadora sencilla</a></li>
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/2/">2. Empezando con R</a></li>
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/3/">3. Data frames - introducción</a></li>
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/4/">4. Data frames - manipulación</a></li>
+</ul>
+  
+</li>
+
+<li class="parent"><a href="/R_stuff/r-courses/mmu-futures-r-course/">MMU Futures R Course</a>
+<ul class="sub-menu">
+<li class=""><a href="/R_stuff/r-courses/mmu-futures-r-course/1/">MMU Futures R Course</a></li>
+<li class="active"><a href="/R_stuff/r-courses/mmu-futures-r-course/2/">Science &amp; Engineering Extracurricular Award - Introduction to R</a></li>
+</ul>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

@@ -3,10 +3,10 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Tags - Miscellaneous R stuff</title>
+<title>2. Vectors, variables and other objects - Miscellaneous R stuff</title>
 <meta name="generator" content="Hugo 0.53" />
 <link href="/R_stuff/index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="/R_stuff/tags/">
+<link rel="canonical" href="/R_stuff/r-courses/mmu-r-intro-course/3/">
 <link rel="stylesheet" href="/R_stuff/css/theme.min.css">
 <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <link rel="stylesheet" href="/R_stuff/css/chroma.min.css">
@@ -28,7 +28,47 @@
 </nav>
 </div>
 <div class="content-container">
-<main><h1>Tags</h1><div class="edit-meta">Last updated on 1 Jan 0001 / Published on 1 Jan 0001<br></div><nav class="pagination"><a class="nav nav-next" href="/R_stuff/code-examples/" title="Examples from R packages">Next - Examples from R packages <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<main><h1>2. Vectors, variables and other objects</h1>
+
+
+<div id="the-a-table-in-r" class="section level3">
+<h3>The &lt;<data frame>&gt; a ‘table’ in R</h3>
+<p><em>Get the worksheet here</em> <a href="../resources/w03_dataframes.r">worksheet 3</a></p>
+<p>We can think of a data frame as a collection of vectors of the same length. For example, let’s combine two vectors into a data frame</p>
+<pre class="r"><code># Think back to this vector:
+v1</code></pre>
+<pre><code>## [1] 50 20  3 15 43</code></pre>
+<p>HOw long is it? i.e. how many elements does it have?</p>
+<pre class="r"><code>length(v1)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p>What type (numeric, character) are the elements?</p>
+<pre class="r"><code>class(v1)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p>Think back to this vector:</p>
+<pre class="r"><code>s1</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;</code></pre>
+<pre class="r"><code>length(s1)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>class(s1)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+</div>
+<div id="the-a-table-in-r-1" class="section level3">
+<h3>The &lt;<data frame>&gt; a ‘table’ in R</h3>
+<ul>
+<li>a basic object to store data in</li>
+</ul>
+<pre class="r"><code>df1 &lt;- data.frame(Type = s1, Value = v1)
+df1</code></pre>
+<pre><code>##   Type Value
+## 1    a    50
+## 2    b    20
+## 3    c     3
+## 4    d    15
+## 5    e    43</code></pre>
+<p><strong>Vectors combined into a data frame must be of same length</strong> <strong>A data frame can contain columns of different data types</strong></p>
+</div>
+<div class="edit-meta">Last updated on 1 Jan 0001 / Published on 1 Jan 0001<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/mmu-r-intro-course/2/" title="2. Vectors, variables and other objects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - 2. Vectors, variables and other objects</a>
+<a class="nav nav-next" href="/R_stuff/r-courses/mmu-r-intro-course/1/" title="1. Getting started with R">Next - 1. Getting started with R <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> <script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
 
 <script>
@@ -48,8 +88,8 @@ hljs.initHighlightingOnLoad();
   
 </li>
 
-<li class=""><a href="/R_stuff/r-courses/">R courses</a>
-<ul class="">
+<li class="parent"><a href="/R_stuff/r-courses/">R courses</a>
+<ul class="sub-menu">
 
 <li class=""><a href="/R_stuff/r-courses/curso-reo-vi/">Curso R del REO VI</a>
 <ul class="">
@@ -61,11 +101,11 @@ hljs.initHighlightingOnLoad();
   
 </li>
 
-<li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/">Science &amp; Engineering Extracurricular Award - Introduction to R</a>
-<ul class="">
+<li class="parent"><a href="/R_stuff/r-courses/mmu-r-intro-course/">Science &amp; Engineering Extracurricular Award - Introduction to R</a>
+<ul class="sub-menu">
 <li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/1/">1. Getting started with R</a></li>
 <li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/2/">2. Vectors, variables and other objects</a></li>
-<li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/3/">2. Vectors, variables and other objects</a></li>
+<li class="active"><a href="/R_stuff/r-courses/mmu-r-intro-course/3/">2. Vectors, variables and other objects</a></li>
 </ul>
   
 </li>

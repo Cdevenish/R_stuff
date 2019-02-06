@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Science &amp; Engineering Extracurricular Award - Introduction to R on Miscellaneous R stuff</title>
+    <link>/R_stuff/r-courses/mmu-r-intro-course/</link>
+    <description>Recent content in Science &amp; Engineering Extracurricular Award - Introduction to R on Miscellaneous R stuff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/R_stuff/r-courses/mmu-r-intro-course/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1. Getting started with R</title>
+      <link>/R_stuff/r-courses/mmu-r-intro-course/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-r-intro-course/1/</guid>
+      <description>R as a calculator Get the worksheet here: worksheet 1
+1 + 1 10 - 5 10 / 2 2^3 # 2 to the power of 3 2 * 5 # with or without spaces - doesn&amp;#39;t make a difference 2*5 Using spaces and lines between your code can make it easier to read. Don&amp;rsquo;t forget to make lots of comments with #
+How to find help In R, use ?</description>
+    </item>
+    
+    <item>
+      <title>2. Vectors, variables and other objects</title>
+      <link>/R_stuff/r-courses/mmu-r-intro-course/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-r-intro-course/2/</guid>
+      <description>Vectors, variables and other objectsGet the worksheet here worksheet 2
+What is a vector? It’s an ordered collection of data. For example, it could be a single column of a table
+[1] 3.79 63.00 0.53 6.46 11.46 0.29 0.08 0.74Or a single value
+[1] 3.141593Types of vectorNumericcontinuousinteger
+Character (string)text
+Logical TRUE or FALSE
+Vector with a single numeric itema &amp;lt;- 1b &amp;lt;- 5x &amp;lt;- 100# note the assign operator: &amp;lt;- # this means assign value on the right hand side to the variable/object name on the lefta## [1] 1x## [1] 100Naming objects… - Don’t use reserved words: ?</description>
+    </item>
+    
+    <item>
+      <title>2. Vectors, variables and other objects</title>
+      <link>/R_stuff/r-courses/mmu-r-intro-course/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-r-intro-course/3/</guid>
+      <description>The &amp;lt;&amp;gt; a ‘table’ in RGet the worksheet here worksheet 3
+We can think of a data frame as a collection of vectors of the same length. For example, let’s combine two vectors into a data frame
+# Think back to this vector:v1## [1] 50 20 3 15 43HOw long is it? i.e. how many elements does it have?
+length(v1)## [1] 5What type (numeric, character) are the elements?</description>
+    </item>
+    
+  </channel>
+</rss>

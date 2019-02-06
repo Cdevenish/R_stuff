@@ -1,0 +1,139 @@
+---
+title: "2. Vectors, variables and other objects"
+author: "Christian Devenish"
+date: "6 Febuary 2019"
+draft: false
+---
+
+
+
+<div id="vectors-variables-and-other-objects" class="section level3">
+<h3>Vectors, variables and other objects</h3>
+<p><em>Get the worksheet here</em> <a href="../resources/w02_vectors.r">worksheet 2</a></p>
+<p>What is a vector? It’s an <em>ordered</em> collection of data. For example, it could be a single column of a table</p>
+<pre><code>[1] 3.79 63.00 0.53 6.46 11.46 0.29 0.08 0.74</code></pre>
+<p>Or a single value</p>
+<pre><code>[1] 3.141593</code></pre>
+</div>
+<div id="types-of-vector" class="section level3">
+<h3>Types of vector</h3>
+<ul>
+<li>Numeric</li>
+<li>continuous</li>
+<li><p>integer</p></li>
+<li>Character (string)</li>
+<li><p>text</p></li>
+<li><p>Logical TRUE or FALSE</p></li>
+</ul>
+</div>
+<div id="vector-with-a-single-numeric-item" class="section level3">
+<h3>Vector with a single numeric item</h3>
+<pre class="r"><code>a &lt;- 1
+b &lt;- 5
+x &lt;- 100
+# note the assign operator: &lt;-  
+# this means assign value on the right hand side to the variable/object name on the left</code></pre>
+<pre class="r"><code>a</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>x</code></pre>
+<pre><code>## [1] 100</code></pre>
+<p><strong>Naming objects…</strong> - Don’t use <em>reserved</em> words: <code>? reserved</code> - Best not to use function names - Don’t begin with a number - Sensitive to upper and lower case - Don’t use spaces - Don’t use symbols such as £ $ % ^ &amp; * ( ) # ? &lt; &gt; / |  [ ] { } </small></p>
+</div>
+<div id="operations-with-vectors-1" class="section level3">
+<h3>Operations with vectors 1</h3>
+<pre class="r"><code>a + b</code></pre>
+<pre><code>## [1] 6</code></pre>
+<pre class="r"><code>(a + b) * x</code></pre>
+<pre><code>## [1] 600</code></pre>
+<pre class="r"><code>a / x</code></pre>
+<pre><code>## [1] 0.01</code></pre>
+<pre class="r"><code>sum(a, b)</code></pre>
+<pre><code>## [1] 6</code></pre>
+<pre class="r"><code>sqrt(x)</code></pre>
+<pre><code>## [1] 10</code></pre>
+<pre class="r"><code>log10(x)</code></pre>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="character-vectors" class="section level3">
+<h3>Character vectors</h3>
+<pre class="r"><code>a &lt;- &quot;Hello&quot;  # text ALWAYS in &quot;quotes&quot;
+b &lt;- &quot;World&quot;
+sp1 &lt;- &quot;Phytotoma raimondii&quot;</code></pre>
+<pre class="r"><code>a  # the object name is not in quotes</code></pre>
+<pre><code>## [1] &quot;Hello&quot;</code></pre>
+<pre class="r"><code>sp1</code></pre>
+<pre><code>## [1] &quot;Phytotoma raimondii&quot;</code></pre>
+<pre><code>[1] &quot;Phytotoma raimondii&quot;</code></pre>
+</div>
+<div id="text-operations" class="section level3">
+<h3>Text operations</h3>
+<pre class="r"><code># Concatenate text
+paste(a, b)</code></pre>
+<pre><code>## [1] &quot;Hello World&quot;</code></pre>
+<pre class="r"><code># and with a separator
+paste(a, sp1, sep=&quot;, &quot;)</code></pre>
+<pre><code>## [1] &quot;Hello, Phytotoma raimondii&quot;</code></pre>
+</div>
+<div id="vectors-with-more-than-one-element" class="section level3">
+<h3>Vectors with more than one element</h3>
+<pre class="r"><code>1:10 # generate a series in steps of 1</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<p>Using the <code>c()</code> function to combine numbers into a vector:</p>
+<pre class="r"><code># combine 5 numbers and assign to a vector called v1
+v1 &lt;- c(50,20,3,15,43)
+v2 &lt;- 5:10
+
+v1</code></pre>
+<pre><code>## [1] 50 20  3 15 43</code></pre>
+<pre class="r"><code>v2</code></pre>
+<pre><code>## [1]  5  6  7  8  9 10</code></pre>
+<p><strong>Vectors only allow one data type (numeric, character, logical)</strong></p>
+</div>
+<div id="operations-with-vectors" class="section level3">
+<h3>Operations with vectors</h3>
+<pre class="r"><code>v1 * 3  # cf. to excel</code></pre>
+<pre><code>## [1] 150  60   9  45 129</code></pre>
+<pre class="r"><code>v1 + v2</code></pre>
+<pre><code>## Warning in v1 + v2: longer object length is not a multiple of shorter
+## object length</code></pre>
+<pre><code>## [1] 55 26 10 23 52 60</code></pre>
+<pre class="r"><code>mean(v1)</code></pre>
+<pre><code>## [1] 26.2</code></pre>
+<pre class="r"><code>sum(v1)/length(v1)</code></pre>
+<pre><code>## [1] 26.2</code></pre>
+</div>
+<div id="getting-a-value-within-a-vector-with-indices" class="section level3">
+<h3>Getting a value within a vector with indices []</h3>
+<pre class="r"><code>v1</code></pre>
+<pre><code>## [1] 50 20  3 15 43</code></pre>
+<pre class="r"><code>v1[3]  # get the 3rd element of the vector v1</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>v1[2:4] # get elements 2 to 4 of v1</code></pre>
+<pre><code>## [1] 20  3 15</code></pre>
+<pre class="r"><code>v1[-1] # get all elements of v1 except for the first</code></pre>
+<pre><code>## [1] 20  3 15 43</code></pre>
+</div>
+<div id="series-of-letters" class="section level3">
+<h3>Series of letters</h3>
+<pre class="r"><code>s1 &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;) # note the c() function
+s2 &lt;- letters[1:5]  # letters is a ready-made object inside R
+s3 &lt;- LETTERS[1:5]  # see ? Constants
+
+s1</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;</code></pre>
+<pre class="r"><code>s2</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;</code></pre>
+<pre class="r"><code>s3</code></pre>
+<pre><code>## [1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot;</code></pre>
+</div>
+<div id="getting-an-elements-in-a-character-vector" class="section level3">
+<h3>Getting an elements in a character vector</h3>
+<pre class="r"><code>s1[1]</code></pre>
+<pre><code>## [1] &quot;a&quot;</code></pre>
+<pre class="r"><code>s1[4:5]</code></pre>
+<pre><code>## [1] &quot;d&quot; &quot;e&quot;</code></pre>
+<pre class="r"><code>sp1[1] # Is this what you expected?</code></pre>
+<pre><code>## [1] &quot;Phytotoma raimondii&quot;</code></pre>
+<pre class="r"><code>s1[-2]</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;</code></pre>
+</div>

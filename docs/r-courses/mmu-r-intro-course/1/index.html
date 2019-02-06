@@ -3,10 +3,10 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>1. R Como calculadora sencilla - Miscellaneous R stuff</title>
+<title>1. Getting started with R - Miscellaneous R stuff</title>
 <meta name="generator" content="Hugo 0.53" />
 <link href="/R_stuff/index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="/R_stuff/r-courses/curso-reo-vi/1/">
+<link rel="canonical" href="/R_stuff/r-courses/mmu-r-intro-course/1/">
 <link rel="stylesheet" href="/R_stuff/css/theme.min.css">
 <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <link rel="stylesheet" href="/R_stuff/css/chroma.min.css">
@@ -28,63 +28,57 @@
 </nav>
 </div>
 <div class="content-container">
-<main><h1>1. R Como calculadora sencilla</h1>
+<main><h1>1. Getting started with R</h1>
 
-<div class="highlight"><pre class="chroma"><code class="language-r setup, include=FALSE" data-lang="r setup, include=FALSE">knitr::opts_chunk$set(echo = TRUE)</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-r maths" data-lang="r maths">1 + 1
+<h3 id="r-as-a-calculator">R as a calculator</h3>
+
+<p><em>Get the worksheet here:</em> <a href="../resources/w01_calculator.r">worksheet 1</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-r maths, echo = T" data-lang="r maths, echo = T">1 + 1
 
 10 - 5
 
 10 / 2
 
-2^3  # potenciación
+2^3  # 2 to the power of 3
 
-2 * 5  # sin o con espacios - funciona igual
+2 * 5  # with or without spaces - doesn&#39;t make a difference
 
 2*5</code></pre></div>
-<p>Sin embargo, espacios pueden facilitar la lectura</p>
+<p>Using spaces and lines between your code can make it easier to read. Don&rsquo;t forget to make lots of comments with #</p>
 
-<h3 id="otros-operadores">Otros operadores</h3>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">%%</span> <span class="m">5</span> <span class="c1"># módulo (resto de la división entera). p.ej 10/5 = 2 (sin decimal)</span>
+<h3 id="how-to-find-help">How to find help</h3>
 
-<span class="m">10</span> <span class="o">%%</span> <span class="m">6</span> <span class="c1"># 10/6 = 1 con un resto de 4</span>
+<p>In R, use <code>?</code> or <code>help()</code></p>
 
-<span class="m">17</span> <span class="o">%%</span> <span class="m">12</span> <span class="c1"># p. ej convertir de 24h a 12h</span>
-
-<span class="m">10</span> <span class="o">%/%</span> <span class="m">5</span> <span class="c1"># división entera (resultado de la división sin fracción - convertido en número entero)</span>
-
-<span class="m">10</span> <span class="o">%/%</span> <span class="m">6</span></code></pre></div>
-<h3 id="como-encontrar-ayuda">Como encontrar ayuda</h3>
-
-<p>Para ayuda con los operadores:</p>
+<p>Help with operators:</p>
 
 <p><code>? Arithmetic</code></p>
 
-<p>O con la función help():
+<p>Or with the help function:
 <code>help(Arithmetic)</code></p>
 
-<p>Ojo con el orden de los operadores&hellip;</p>
+<p>Be careful with the order of the operators&hellip;</p>
 
 <ul>
 <li><code>^</code></li>
-<li><code>%%  %/%</code></li>
 <li><code>*  /</code></li>
 <li><code>+  -</code></li>
 </ul>
 
-<p>Ver
+<p>See here:
 <code>? Syntax</code></p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">+</span> <span class="m">10</span> <span class="o">/</span> <span class="m">2</span> <span class="o">-</span> <span class="m">1</span>
 
 <span class="p">(</span><span class="m">10</span> <span class="o">+</span> <span class="m">10</span><span class="p">)</span> <span class="o">/</span><span class="m">2</span> <span class="o">-</span> <span class="m">1</span>
 
 <span class="m">8</span> <span class="o">-</span> <span class="m">4</span> <span class="o">*</span> <span class="m">4</span> <span class="o">+</span> <span class="m">2</span> </code></pre></div>
-<p>En RStudio puedes seleccionar una parte del código en el script y ejecutarlo con ctrl + enter</p>
+<p>In RStudio, you can select part of the code on one line and run it with ctrl + enter</p>
 
-<p>Si no te acuerdas del orden, o tienes dudas, usa parentesis&hellip;.</p>
+<p>If you&rsquo;re not sure about the order of the operators, use brackets&hellip;</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">+</span> <span class="p">(</span><span class="m">10</span> <span class="o">/</span> <span class="m">2</span><span class="p">)</span> <span class="o">-</span> <span class="m">1</span>
 
-<span class="m">10</span> <span class="o">+</span> <span class="m">10</span> <span class="o">/</span> <span class="m">2</span> <span class="o">-</span> <span class="m">1</span></code></pre></div><div class="edit-meta">Last updated on 1 Jan 0001 / Published on 1 Jan 0001<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/curso-reo-vi/" title="Curso R del REO VI"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Curso R del REO VI</a>
-<a class="nav nav-next" href="/R_stuff/r-courses/curso-reo-vi/2/" title="2. Empezando con R">Next - 2. Empezando con R <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<span class="m">10</span> <span class="o">+</span> <span class="m">10</span> <span class="o">/</span> <span class="m">2</span> <span class="o">-</span> <span class="m">1</span></code></pre></div><div class="edit-meta">Last updated on 1 Jan 0001 / Published on 1 Jan 0001<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/mmu-r-intro-course/" title="Science &amp; Engineering Extracurricular Award - Introduction to R"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Science &amp; Engineering Extracurricular Award - Introduction to R</a>
+<a class="nav nav-next" href="/R_stuff/r-courses/mmu-r-intro-course/2/" title="2. Vectors, variables and other objects">Next - 2. Vectors, variables and other objects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> <script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
 
 <script>
@@ -107,9 +101,9 @@ hljs.initHighlightingOnLoad();
 <li class="parent"><a href="/R_stuff/r-courses/">R courses</a>
 <ul class="sub-menu">
 
-<li class="parent"><a href="/R_stuff/r-courses/curso-reo-vi/">Curso R del REO VI</a>
-<ul class="sub-menu">
-<li class="active"><a href="/R_stuff/r-courses/curso-reo-vi/1/">1. R Como calculadora sencilla</a></li>
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/">Curso R del REO VI</a>
+<ul class="">
+<li class=""><a href="/R_stuff/r-courses/curso-reo-vi/1/">1. R Como calculadora sencilla</a></li>
 <li class=""><a href="/R_stuff/r-courses/curso-reo-vi/2/">2. Empezando con R</a></li>
 <li class=""><a href="/R_stuff/r-courses/curso-reo-vi/3/">3. Data frames - introducción</a></li>
 <li class=""><a href="/R_stuff/r-courses/curso-reo-vi/4/">4. Data frames - manipulación</a></li>
@@ -117,9 +111,9 @@ hljs.initHighlightingOnLoad();
   
 </li>
 
-<li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/">Science &amp; Engineering Extracurricular Award - Introduction to R</a>
-<ul class="">
-<li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/1/">1. Getting started with R</a></li>
+<li class="parent"><a href="/R_stuff/r-courses/mmu-r-intro-course/">Science &amp; Engineering Extracurricular Award - Introduction to R</a>
+<ul class="sub-menu">
+<li class="active"><a href="/R_stuff/r-courses/mmu-r-intro-course/1/">1. Getting started with R</a></li>
 <li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/2/">2. Vectors, variables and other objects</a></li>
 <li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/3/">2. Vectors, variables and other objects</a></li>
 </ul>

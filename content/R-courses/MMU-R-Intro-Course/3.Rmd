@@ -1,0 +1,59 @@
+
+---
+title: "2. Vectors, variables and other objects"
+author: "Christian Devenish"
+date: "6 Febuary 2019"
+draft: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, results = "markup", eval = T)
+```
+
+```{r objects, include = F}
+
+v1 <- c(50,20,3,15,43)
+s1 <- c("a", "b", "c", "d", "e") 
+
+```
+
+
+### The <<data frame>>  a 'table' in R
+*Get the worksheet here* [worksheet 3](../resources/w03_dataframes.r)
+
+
+We can think of a data frame as a collection of vectors of the same length. For example, let's combine two vectors into a data frame
+
+```{r}
+# Think back to this vector:
+v1
+```
+
+HOw long is it? i.e. how many elements does it have?
+```{r}
+length(v1)
+```
+
+What type (numeric, character) are the elements?
+```{r}
+class(v1)
+```
+
+Think back to this vector:
+```{r}
+s1
+length(s1)
+class(s1)
+```
+
+### The <<data frame>>  a 'table' in R
+- a basic object to store data in  
+  
+
+```{r}
+df1 <- data.frame(Type = s1, Value = v1)
+df1
+```
+
+**Vectors combined into a data frame must be of same length**
+**A data frame can contain columns of different data types**

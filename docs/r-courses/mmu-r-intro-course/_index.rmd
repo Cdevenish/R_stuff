@@ -1,5 +1,5 @@
 ---
-title: "MMU Futures R Course"
+title: "Science & Engineering Extracurricular Award - Introduction to R"
 author: "Christian Devenish"
 date: "24 December 2018"
 output: html_document

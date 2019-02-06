@@ -1,0 +1,236 @@
+
+---
+title: "2. Vectors, variables and other objects"
+author: "Christian Devenish"
+date: "6 Febuary 2019"
+draft: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, results = "markup", eval = T)
+```
+
+### Vectors, variables and other objects
+*Get the worksheet here* [worksheet 2](../resources/w02_vectors.r)
+
+
+What is a vector? It's an *ordered* collection of data.
+For example, it could be a single column of a table 
+
+
+```
+[1] 3.79 63.00 0.53 6.46 11.46 0.29 0.08 0.74
+```
+Or a single value
+
+```
+[1] 3.141593
+```
+
+### Types of vector
+
+- Numeric
+ - continuous
+ - integer
+
+- Character (string)
+ - text
+
+- Logical
+TRUE or FALSE
+
+### Vector with a single numeric item
+
+
+```{r }
+a <- 1
+b <- 5
+x <- 100
+# note the assign operator: <-  
+# this means assign value on the right hand side to the variable/object name on the left
+```
+
+```{r }
+a
+```
+
+
+```{r eval = TRUE}
+x
+```
+
+
+**Naming objects...**
+- Don't use *reserved* words:
+`? reserved`
+- Best not to use function names
+- Don't begin with a number
+- Sensitive to upper and lower case
+- Don't use spaces
+- Don't use symbols such as £ $ % ^ & * ( ) # ? < > / | \ [ ] { }
+</small>
+
+### Operations with vectors 1
+
+
+```{r}
+a + b
+```
+
+
+```{r}
+(a + b) * x
+```
+
+
+
+```{r}
+a / x
+```
+
+
+```{r}
+sum(a, b)
+```
+
+
+```{r}
+sqrt(x)
+```
+
+
+```{r}
+log10(x)
+```
+
+
+### Character vectors
+
+```{r}
+a <- "Hello"  # text ALWAYS in "quotes"
+b <- "World"
+sp1 <- "Phytotoma raimondii"
+```
+
+```{r}
+a  # the object name is not in quotes
+```
+
+
+```{r}
+sp1
+```
+
+```
+[1] "Phytotoma raimondii"
+```
+
+### Text operations
+
+
+```{r}
+# Concatenate text
+paste(a, b)
+```
+
+
+```{r}
+# and with a separator
+paste(a, sp1, sep=", ")
+```
+
+### Vectors with more than one element
+
+```{r}
+1:10 # generate a series in steps of 1
+```
+
+
+Using the `c()` function to combine numbers into a vector:
+```{r}
+# combine 5 numbers and assign to a vector called v1
+v1 <- c(50,20,3,15,43)
+v2 <- 5:10
+
+v1
+v2
+```
+
+**Vectors only allow one data type (numeric, character, logical)**
+
+### Operations with vectors
+
+
+```{r}
+v1 * 3  # cf. to excel
+```
+
+
+```{r}
+v1 + v2
+```
+
+
+```{r}
+mean(v1)
+```
+
+
+```{r}
+sum(v1)/length(v1)
+```
+
+
+### Getting a value within a vector with indices []
+
+```{r}
+v1
+```
+
+
+```{r}
+v1[3]  # get the 3rd element of the vector v1
+```
+
+```{r}
+v1[2:4] # get elements 2 to 4 of v1
+```
+
+
+```{r}
+v1[-1] # get all elements of v1 except for the first
+```
+
+### Series of letters
+
+```{r}
+s1 <- c("a", "b", "c", "d", "e") # note the c() function
+s2 <- letters[1:5]  # letters is a ready-made object inside R
+s3 <- LETTERS[1:5]  # see ? Constants
+
+s1
+s2
+s3
+```
+
+
+### Getting an elements in a character vector
+
+
+```{r}
+s1[1]
+```
+
+```{r}
+s1[4:5]
+```
+
+```{r}
+sp1[1] # Is this what you expected?
+```
+
+
+```{r}
+s1[-2]
+```
+

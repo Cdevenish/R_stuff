@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>Example md page</title>
-      <link>/R_stuff/code-examples/2/</link>
-      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/R_stuff/code-examples/2/</guid>
-      <description>HeaderH1 HeaderH2 HeaderH3 HeaderParagraphLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
-    <item>
       <title>Creating animated gifs with gifski in R</title>
       <link>/R_stuff/code-examples/1/</link>
       <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
@@ -37,6 +28,17 @@ library(gifski)# set up file paths to save the pngspng_path &amp;lt;- file.pat
       
       <guid>/R_stuff/about/</guid>
       <description>CD is an ecologist&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>1. Getting started with R</title>
+      <link>/R_stuff/r-courses/mmu-r-intro-course/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-r-intro-course/1/</guid>
+      <description>R as a calculator Get the worksheet here: worksheet 1
+1 + 1 10 - 5 10 / 2 2^3 # 2 to the power of 3 2 * 5 # with or without spaces - doesn&amp;#39;t make a difference 2*5 Using spaces and lines between your code can make it easier to read. Don&amp;rsquo;t forget to make lots of comments with #
+How to find help In R, use ?</description>
     </item>
     
     <item>
@@ -64,6 +66,33 @@ Tipos de datos  Numérico (numeric) &amp;ndash; variable continuo &amp;ndash; va
  Carácter (character, string) &amp;ndash; texto
  Lógico (logical) TRUE FALSE
   Vector con un solo dato numérico a &amp;lt;- 1 b &amp;lt;- 5 x &amp;lt;- 100 # Operador de asignación: &amp;lt;- a x ###Para nombrar variables&amp;hellip; - No usar palabras reservadas</description>
+    </item>
+    
+    <item>
+      <title>2. Vectors, variables and other objects</title>
+      <link>/R_stuff/r-courses/mmu-r-intro-course/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-r-intro-course/2/</guid>
+      <description>Vectors, variables and other objectsGet the worksheet here worksheet 2
+What is a vector? It’s an ordered collection of data. For example, it could be a single column of a table
+[1] 3.79 63.00 0.53 6.46 11.46 0.29 0.08 0.74Or a single value
+[1] 3.141593Types of vectorNumericcontinuousinteger
+Character (string)text
+Logical TRUE or FALSE
+Vector with a single numeric itema &amp;lt;- 1b &amp;lt;- 5x &amp;lt;- 100# note the assign operator: &amp;lt;- # this means assign value on the right hand side to the variable/object name on the lefta## [1] 1x## [1] 100Naming objects… - Don’t use reserved words: ?</description>
+    </item>
+    
+    <item>
+      <title>2. Vectors, variables and other objects</title>
+      <link>/R_stuff/r-courses/mmu-r-intro-course/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-r-intro-course/3/</guid>
+      <description>The &amp;lt;&amp;gt; a ‘table’ in RGet the worksheet here worksheet 3
+We can think of a data frame as a collection of vectors of the same length. For example, let’s combine two vectors into a data frame
+# Think back to this vector:v1## [1] 50 20 3 15 43HOw long is it? i.e. how many elements does it have?
+length(v1)## [1] 5What type (numeric, character) are the elements?</description>
     </item>
     
     <item>

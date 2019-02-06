@@ -1,0 +1,45 @@
+---
+title: "2. Vectors, variables and other objects"
+author: "Christian Devenish"
+date: "6 Febuary 2019"
+draft: false
+---
+
+
+
+<div id="the-a-table-in-r" class="section level3">
+<h3>The &lt;<data frame>&gt; a ‘table’ in R</h3>
+<p><em>Get the worksheet here</em> <a href="../resources/w03_dataframes.r">worksheet 3</a></p>
+<p>We can think of a data frame as a collection of vectors of the same length. For example, let’s combine two vectors into a data frame</p>
+<pre class="r"><code># Think back to this vector:
+v1</code></pre>
+<pre><code>## [1] 50 20  3 15 43</code></pre>
+<p>HOw long is it? i.e. how many elements does it have?</p>
+<pre class="r"><code>length(v1)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p>What type (numeric, character) are the elements?</p>
+<pre class="r"><code>class(v1)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p>Think back to this vector:</p>
+<pre class="r"><code>s1</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;</code></pre>
+<pre class="r"><code>length(s1)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>class(s1)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+</div>
+<div id="the-a-table-in-r-1" class="section level3">
+<h3>The &lt;<data frame>&gt; a ‘table’ in R</h3>
+<ul>
+<li>a basic object to store data in</li>
+</ul>
+<pre class="r"><code>df1 &lt;- data.frame(Type = s1, Value = v1)
+df1</code></pre>
+<pre><code>##   Type Value
+## 1    a    50
+## 2    b    20
+## 3    c     3
+## 4    d    15
+## 5    e    43</code></pre>
+<p><strong>Vectors combined into a data frame must be of same length</strong> <strong>A data frame can contain columns of different data types</strong></p>
+</div>
