@@ -42,7 +42,7 @@ What is a vector? It’s an ordered collection of data. For example, it could be
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/R_stuff/r-courses/mmu-r-intro-course/3/</guid>
-      <description>The &amp;lt;&amp;gt; a ‘table’ in RGet the worksheet here worksheet 3
+      <description>The data frame a ‘table’ in RGet the worksheet here worksheet 3
 We can think of a data frame as a collection of vectors of the same length. For example, let’s combine two vectors into a data frame
 # Think back to this vector:v1## [1] 50 20 3 15 43HOw long is it? i.e. how many elements does it have?
 length(v1)## [1] 5What type (numeric, character) are the elements?</description>
