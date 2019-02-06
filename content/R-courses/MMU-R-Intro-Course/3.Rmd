@@ -1,6 +1,6 @@
 
 ---
-title: "3. Data frame in R"
+title: "3. Data frames in R"
 author: "Christian Devenish"
 date: "6 Febuary 2019"
 draft: false
@@ -29,7 +29,7 @@ We can think of a data frame as a collection of vectors of the same length. For 
 v1
 ```
 
-HOw long is it? i.e. how many elements does it have?
+How long is it? i.e. how many elements does it have?
 ```{r}
 length(v1)
 ```

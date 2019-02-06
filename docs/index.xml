@@ -84,18 +84,6 @@ What is a vector? It’s an ordered collection of data. For example, it could be
     </item>
     
     <item>
-      <title>3. Data frame in R</title>
-      <link>/R_stuff/r-courses/mmu-r-intro-course/3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/R_stuff/r-courses/mmu-r-intro-course/3/</guid>
-      <description>The data frame a ‘table’ in RGet the worksheet here worksheet 3
-We can think of a data frame as a collection of vectors of the same length. For example, let’s combine two vectors into a data frame
-# Think back to this vector:v1## [1] 50 20 3 15 43HOw long is it? i.e. how many elements does it have?
-length(v1)## [1] 5What type (numeric, character) are the elements?</description>
-    </item>
-    
-    <item>
       <title>3. Data frames - introducción</title>
       <link>/R_stuff/r-courses/curso-reo-vi/3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -103,6 +91,18 @@ length(v1)## [1] 5What type (numeric, character) are the elements?</descriptio
       <guid>/R_stuff/r-courses/curso-reo-vi/3/</guid>
       <description>knitr::opts_chunk$set(echo = TRUE) El Data frame - una &amp;ldquo;tabla&amp;rdquo; en R Podemos pensar en el data frame como una colección de vectores del mismo largo
 v1 &amp;lt;- c(5,2.5,3,10,5) v1 s1 &amp;lt;- c(&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;d&amp;#34;, &amp;#34;e&amp;#34;) s1 df1 &amp;lt;- data.frame(Tipo = s1, Valor = v1) Es un objeto básico para almacenar datos df1 # A la izquierda se muestra el número de fila Importar datos a R Directamente desde el teclado usando lo que ya vimos</description>
+    </item>
+    
+    <item>
+      <title>3. Data frames in R</title>
+      <link>/R_stuff/r-courses/mmu-r-intro-course/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-r-intro-course/3/</guid>
+      <description>The data frame a ‘table’ in RGet the worksheet here worksheet 3
+We can think of a data frame as a collection of vectors of the same length. For example, let’s combine two vectors into a data frame
+# Think back to this vector:v1## [1] 50 20 3 15 43How long is it? i.e. how many elements does it have?
+length(v1)## [1] 5What type (numeric, character) are the elements?</description>
     </item>
     
     <item>
