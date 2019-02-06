@@ -1,0 +1,22 @@
+
+---
+title: "5. Tests"
+author: "Christian Devenish"
+date: "6 Febuary 2019"
+draft: false
+---
+
+
+
+### Tests and data
+
+
+Download data for example tests here: [data and tests zip](../resources/test_data.zip)
+
+- T test
+- Anova
+- Correlations
+
+
+Download extra data here: [extra data zip](../resources/extra_data.zip)
+

@@ -1,0 +1,41 @@
+---
+title: "4. Importing data into R"
+author: "Christian Devenish"
+date: "6 Febuary 2019"
+draft: false
+---
+
+
+
+<div id="getting-data-from-an-external-source" class="section level3">
+<h3>Getting data from an external source</h3>
+<p>Download the data file here - save it in your course folder: <a href="../resources/sparrow.xls">sparrows data in excel</a><br />
+<em>Get the worksheet here</em> <a href="../resources/w04_importingData.r">worksheet 4</a></p>
+<p>Transform an excel file to a csv with <em>save as</em> in the <em>file</em> menu. Call it <em>sparrows.csv</em></p>
+<p>We use <code>read.csv()</code> to import into R.</p>
+<pre class="r"><code>sparrows &lt;- read.csv(&quot;sparrows.csv&quot;)</code></pre>
+<p>Always check your data after importing:</p>
+<p><strong><code>str()</code></strong> tells us what kind of object it is, and its structure.</p>
+<p>e.g. a Data frame with 5 columns, and 20 rows, and the data type of each column:</p>
+<pre class="r"><code>str(sparrows)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    20 obs. of  5 variables:
+##  $ Species : Factor w/ 2 levels &quot;SESP&quot;,&quot;SSTS&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Sex     : Factor w/ 2 levels &quot;Female&quot;,&quot;Male&quot;: 1 1 1 1 1 2 2 2 2 2 ...
+##  $ Culmen  : num  15.2 15 14.9 14.8 14.4 14.9 15.8 16 15.8 14.6 ...
+##  $ Weight  : num  22.8 21.7 21.1 20.9 19.7 24.4 22.8 22.6 25.2 NA ...
+##  $ Observer: int  2 2 3 8 3 1 1 1 2 2 ...</code></pre>
+<p><strong><code>head()</code></strong> shows us the first 6 lines of data:</p>
+<pre class="r"><code>head(sparrows)</code></pre>
+<pre><code>##   Species    Sex Culmen Weight Observer
+## 1    SESP Female   15.2   22.8        2
+## 2    SESP Female   15.0   21.7        2
+## 3    SESP Female   14.9   21.1        3
+## 4    SESP Female   14.8   20.9        8
+## 5    SESP Female   14.4   19.7        3
+## 6    SESP   Male   14.9   24.4        1</code></pre>
+<p>To access a single column from the data frame, we use the <code>$</code> symbol between the data frame name and the column name:</p>
+<p><strong>DATA-FRAME-NAME$COLUMN-NAME</strong></p>
+<pre class="r"><code>sparrows$Culmen</code></pre>
+<pre><code>##  [1] 15.2 15.0 14.9 14.8 14.4 14.9 15.8 16.0 15.8 14.6 12.2 13.3 13.7 13.7
+## [15] 13.7 13.9 13.8 13.2 13.8 13.8</code></pre>
+</div>

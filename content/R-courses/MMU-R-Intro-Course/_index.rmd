@@ -1,7 +1,40 @@
 ---
 title: "Science & Engineering Extracurricular Award - Introduction to R"
 author: "Christian Devenish"
-date: "24 December 2018"
+date: "6 February 2019"
 output: html_document
 ---
+
+
+This is an introductory course in using R for programming and statistics.
+
+1. We will look at how to organise your work in R studio:
+
+- What the different windows are for in RStudio
+- How to set your working directory
+- How to organise a script
+- Writing comments - lots of **comments**!
+
+
+2. A basic introduction to how R works as a calculator
+- Getting the feel for running commands
+
+3. How data is organised in R
+- Vectors, variables and dataframes
+
+4. How to import data into R
+- Import from excel (or csv file)
+- Using built-in data sets
+- Correcting common errors in excel/data sheets
+
+5. Using basic functions in R
+- `mean()`, `sum()`, `subset()`
+- Functions by groups, `tapply()`
+
+6. Basics of plotting in R
+- Using `plot()`
+
+7. Some basic statistical functions
+- Testing for differences between groups - T test, Anova
+- Correlations
 

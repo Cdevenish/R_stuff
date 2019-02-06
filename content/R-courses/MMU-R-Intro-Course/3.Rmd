@@ -1,6 +1,6 @@
 
 ---
-title: "2. Vectors, variables and other objects"
+title: "3. Data frame in R"
 author: "Christian Devenish"
 date: "6 Febuary 2019"
 draft: false

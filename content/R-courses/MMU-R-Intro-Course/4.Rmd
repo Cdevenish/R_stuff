@@ -1,0 +1,60 @@
+
+---
+title: "4. Importing data into R"
+author: "Christian Devenish"
+date: "6 Febuary 2019"
+draft: false
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, results = "markup", eval = T)
+sparrows <- read.csv("resources/sparrows.csv")
+```
+
+
+### Getting data from an external source
+Download the data file here - save it in your course folder: [sparrows data in excel](../resources/sparrow.xls)  
+*Get the worksheet here* [worksheet 4](../resources/w04_importingData.r)
+
+Transform an excel file to a csv with *save as* in the *file* menu. Call it *sparrows.csv*
+
+We use `read.csv()` to import into R.
+
+```{r, eval = F}
+sparrows <- read.csv("sparrows.csv")
+
+```
+
+Always check your data after importing:
+
+**`str()`** tells us what kind of object it is, and its structure.
+
+e.g. a Data frame with 5 columns, and 20 rows, and the data type of each column:
+
+```{r}
+
+str(sparrows)
+
+```
+
+**`head()`** shows us the first 6 lines of data:
+
+```{r}
+
+head(sparrows)
+
+```
+
+To access a single column from the data frame, we use the `$` symbol between the data frame name and the column name:
+
+**DATA-FRAME-NAME$COLUMN-NAME**
+
+```{r}
+sparrows$Culmen
+
+```
+
+
+

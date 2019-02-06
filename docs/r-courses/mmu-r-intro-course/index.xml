@@ -37,7 +37,7 @@ What is a vector? It’s an ordered collection of data. For example, it could be
     </item>
     
     <item>
-      <title>2. Vectors, variables and other objects</title>
+      <title>3. Data frame in R</title>
       <link>/R_stuff/r-courses/mmu-r-intro-course/3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -46,6 +46,31 @@ What is a vector? It’s an ordered collection of data. For example, it could be
 We can think of a data frame as a collection of vectors of the same length. For example, let’s combine two vectors into a data frame
 # Think back to this vector:v1## [1] 50 20 3 15 43HOw long is it? i.e. how many elements does it have?
 length(v1)## [1] 5What type (numeric, character) are the elements?</description>
+    </item>
+    
+    <item>
+      <title>4. Importing data into R</title>
+      <link>/R_stuff/r-courses/mmu-r-intro-course/4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-r-intro-course/4/</guid>
+      <description>Getting data from an external sourceDownload the data file here - save it in your course folder: sparrows data in excel
+Get the worksheet here worksheet 4
+Transform an excel file to a csv with save as in the file menu. Call it sparrows.csv
+We use read.csv() to import into R.
+sparrows &amp;lt;- read.csv(&amp;quot;sparrows.csv&amp;quot;)Always check your data after importing:
+str() tells us what kind of object it is, and its structure.</description>
+    </item>
+    
+    <item>
+      <title>5. Tests</title>
+      <link>/R_stuff/r-courses/mmu-r-intro-course/5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/R_stuff/r-courses/mmu-r-intro-course/5/</guid>
+      <description>Tests and dataDownload data for example tests here: data and tests zip
+T testAnovaCorrelationsDownload extra data here: extra data zip
+</description>
     </item>
     
   </channel>

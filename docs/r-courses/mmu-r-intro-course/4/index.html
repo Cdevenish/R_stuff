@@ -3,10 +3,10 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>1. Getting started with R - Miscellaneous R stuff</title>
+<title>4. Importing data into R - Miscellaneous R stuff</title>
 <meta name="generator" content="Hugo 0.53" />
 <link href="/R_stuff/index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="/R_stuff/r-courses/mmu-r-intro-course/1/">
+<link rel="canonical" href="/R_stuff/r-courses/mmu-r-intro-course/4/">
 <link rel="stylesheet" href="/R_stuff/css/theme.min.css">
 <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <link rel="stylesheet" href="/R_stuff/css/chroma.min.css">
@@ -28,57 +28,43 @@
 </nav>
 </div>
 <div class="content-container">
-<main><h1>1. Getting started with R</h1>
+<main><h1>4. Importing data into R</h1>
 
-<h3 id="r-as-a-calculator">R as a calculator</h3>
 
-<p><em>Get the worksheet here:</em> <a href="../resources/w01_calculator.r">worksheet 1</a></p>
-<div class="highlight"><pre class="chroma"><code class="language-r maths, echo = T" data-lang="r maths, echo = T">1 + 1
-
-10 - 5
-
-10 / 2
-
-2^3  # 2 to the power of 3
-
-2 * 5  # with or without spaces - doesn&#39;t make a difference
-
-2*5</code></pre></div>
-<p>Using spaces and lines between your code can make it easier to read. Don&rsquo;t forget to make lots of comments with #</p>
-
-<h3 id="how-to-find-help">How to find help</h3>
-
-<p>In R, use <code>?</code> or <code>help()</code></p>
-
-<p>Help with operators:</p>
-
-<p><code>? Arithmetic</code></p>
-
-<p>Or with the help function:
-<code>help(Arithmetic)</code></p>
-
-<p>Be careful with the order of the operators&hellip;</p>
-
-<ul>
-<li><code>^</code></li>
-<li><code>*  /</code></li>
-<li><code>+  -</code></li>
-</ul>
-
-<p>See here:
-<code>? Syntax</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">+</span> <span class="m">10</span> <span class="o">/</span> <span class="m">2</span> <span class="o">-</span> <span class="m">1</span>
-
-<span class="p">(</span><span class="m">10</span> <span class="o">+</span> <span class="m">10</span><span class="p">)</span> <span class="o">/</span><span class="m">2</span> <span class="o">-</span> <span class="m">1</span>
-
-<span class="m">8</span> <span class="o">-</span> <span class="m">4</span> <span class="o">*</span> <span class="m">4</span> <span class="o">+</span> <span class="m">2</span> </code></pre></div>
-<p>In RStudio, you can select part of the code on one line and run it with ctrl + enter</p>
-
-<p>If you&rsquo;re not sure about the order of the operators, use brackets&hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="m">10</span> <span class="o">+</span> <span class="p">(</span><span class="m">10</span> <span class="o">/</span> <span class="m">2</span><span class="p">)</span> <span class="o">-</span> <span class="m">1</span>
-
-<span class="m">10</span> <span class="o">+</span> <span class="m">10</span> <span class="o">/</span> <span class="m">2</span> <span class="o">-</span> <span class="m">1</span></code></pre></div><div class="edit-meta">Last updated on 1 Jan 0001 / Published on 1 Jan 0001<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/mmu-r-intro-course/" title="Science &amp; Engineering Extracurricular Award - Introduction to R"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Science &amp; Engineering Extracurricular Award - Introduction to R</a>
-<a class="nav nav-next" href="/R_stuff/r-courses/mmu-r-intro-course/2/" title="2. Vectors, variables and other objects">Next - 2. Vectors, variables and other objects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<div id="getting-data-from-an-external-source" class="section level3">
+<h3>Getting data from an external source</h3>
+<p>Download the data file here - save it in your course folder: <a href="../resources/sparrow.xls">sparrows data in excel</a><br />
+<em>Get the worksheet here</em> <a href="../resources/w04_importingData.r">worksheet 4</a></p>
+<p>Transform an excel file to a csv with <em>save as</em> in the <em>file</em> menu. Call it <em>sparrows.csv</em></p>
+<p>We use <code>read.csv()</code> to import into R.</p>
+<pre class="r"><code>sparrows &lt;- read.csv(&quot;sparrows.csv&quot;)</code></pre>
+<p>Always check your data after importing:</p>
+<p><strong><code>str()</code></strong> tells us what kind of object it is, and its structure.</p>
+<p>e.g. a Data frame with 5 columns, and 20 rows, and the data type of each column:</p>
+<pre class="r"><code>str(sparrows)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    20 obs. of  5 variables:
+##  $ Species : Factor w/ 2 levels &quot;SESP&quot;,&quot;SSTS&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Sex     : Factor w/ 2 levels &quot;Female&quot;,&quot;Male&quot;: 1 1 1 1 1 2 2 2 2 2 ...
+##  $ Culmen  : num  15.2 15 14.9 14.8 14.4 14.9 15.8 16 15.8 14.6 ...
+##  $ Weight  : num  22.8 21.7 21.1 20.9 19.7 24.4 22.8 22.6 25.2 NA ...
+##  $ Observer: int  2 2 3 8 3 1 1 1 2 2 ...</code></pre>
+<p><strong><code>head()</code></strong> shows us the first 6 lines of data:</p>
+<pre class="r"><code>head(sparrows)</code></pre>
+<pre><code>##   Species    Sex Culmen Weight Observer
+## 1    SESP Female   15.2   22.8        2
+## 2    SESP Female   15.0   21.7        2
+## 3    SESP Female   14.9   21.1        3
+## 4    SESP Female   14.8   20.9        8
+## 5    SESP Female   14.4   19.7        3
+## 6    SESP   Male   14.9   24.4        1</code></pre>
+<p>To access a single column from the data frame, we use the <code>$</code> symbol between the data frame name and the column name:</p>
+<p><strong>DATA-FRAME-NAME$COLUMN-NAME</strong></p>
+<pre class="r"><code>sparrows$Culmen</code></pre>
+<pre><code>##  [1] 15.2 15.0 14.9 14.8 14.4 14.9 15.8 16.0 15.8 14.6 12.2 13.3 13.7 13.7
+## [15] 13.7 13.9 13.8 13.2 13.8 13.8</code></pre>
+</div>
+<div class="edit-meta">Last updated on 1 Jan 0001 / Published on 1 Jan 0001<br></div><nav class="pagination"><a class="nav nav-prev" href="/R_stuff/r-courses/mmu-r-intro-course/3/" title="3. Data frame in R"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - 3. Data frame in R</a>
+<a class="nav nav-next" href="/R_stuff/r-courses/mmu-r-intro-course/5/" title="5. Tests">Next - 5. Tests <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> <script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
 
 <script>
@@ -113,10 +99,10 @@ hljs.initHighlightingOnLoad();
 
 <li class="parent"><a href="/R_stuff/r-courses/mmu-r-intro-course/">Science &amp; Engineering Extracurricular Award - Introduction to R</a>
 <ul class="sub-menu">
-<li class="active"><a href="/R_stuff/r-courses/mmu-r-intro-course/1/">1. Getting started with R</a></li>
+<li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/1/">1. Getting started with R</a></li>
 <li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/2/">2. Vectors, variables and other objects</a></li>
 <li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/3/">3. Data frame in R</a></li>
-<li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/4/">4. Importing data into R</a></li>
+<li class="active"><a href="/R_stuff/r-courses/mmu-r-intro-course/4/">4. Importing data into R</a></li>
 <li class=""><a href="/R_stuff/r-courses/mmu-r-intro-course/5/">5. Tests</a></li>
 </ul>
   
